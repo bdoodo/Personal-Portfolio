@@ -358,6 +358,12 @@ html.is-animating .transition-fade {
     animation: float5 40s linear both infinite alternate;
 }
 
+@media screen and (max-width: 480px) {
+    v-inline {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 790px) {
     #b-sig {
         margin-bottom: 4em;

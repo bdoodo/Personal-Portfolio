@@ -9,14 +9,6 @@ const five = document.querySelector('#anim-5');
 let animSequence = [one, two, three, four];
 
 async function startAnimations() {
-    bodymovin.loadAnimation({
-        container: document.getElementById('b-sig'),
-        renderer: 'svg',
-        loop: false,
-        path: 'Assets/b-sig.json',
-        name: 'b-sig'
-    });
-
     await timer(1500)
     for (let i=0; i<animSequence.length; i++){
         animSequence[i].classList.add('fade-slide-right');
