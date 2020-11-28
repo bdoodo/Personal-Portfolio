@@ -79,16 +79,20 @@ a {
 /*nav*/
 
 nav {
-    height: 14px;
-    width: 28px;
-    position: fixed;
-    right: 4%;
-    top: 4%;
-    z-index: 10;
+    width:100%;
+    position:fixed;
+    z-index:10;
+    top:0;
+    height:calc(4vh + 36px);
 }
 
 nav img {
-    transition: 1s ease-in-out;
+    transition:1s ease-in-out;
+    position:absolute;
+    height:14px;
+    width:28px;
+    right:4vw;
+    top:4vh
 }
 
 nav img:hover {
@@ -97,9 +101,10 @@ nav img:hover {
 }
 
 nav ul {
-    position: relative;
-    list-style: none;
-    right: 5em;
+    position:relative;
+    list-style:none;
+    right:calc(4vw + 1em);
+    padding-top:3em;
     text-align: right;
 }
 
@@ -141,7 +146,7 @@ nav ul {
 }
 
 .em-indent {
-    text-indent: 1em;
+    margin-left: 1em;
 }
 
 .en-indent {
@@ -311,6 +316,10 @@ html.is-animating .transition-fade {
     position: relative;
 }
 
+#content-2 {
+    z-index: 5;
+}
+
 #section-3 {
     text-align: center;
     padding-bottom: 50px;
@@ -321,6 +330,7 @@ html.is-animating .transition-fade {
     opacity: 10%;
     position: absolute;
     user-select: none;
+    z-index: 0;
 }
 
 #l1 {
@@ -362,6 +372,9 @@ html.is-animating .transition-fade {
     v-inline {
         display: none;
     }
+    .floating {
+        color: #f2f2f2;
+    }
 }
 
 @media screen and (max-width: 790px) {
@@ -375,7 +388,9 @@ html.is-animating .transition-fade {
         line-height: normal;
     }
     ul  .open {
-        backdrop-filter: blur(3px);
+        width: 4em;
+        right: 0;
+        position: absolute;
     }
 }
 
