@@ -92,7 +92,7 @@ nav img {
     height:14px;
     width:28px;
     right:4vw;
-    top:4vh
+    top:4vh;
 }
 
 nav img:hover {
@@ -369,11 +369,14 @@ html.is-animating .transition-fade {
 }
 
 @media screen and (max-width: 480px) {
-    v-inline {
-        display: none;
-    }
     .floating {
         color: #f2f2f2;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #v-inline {
+        display: none;
     }
 }
 

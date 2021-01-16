@@ -1,18 +1,21 @@
 {
   "name": "Site-files",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Brian Do",
   "license": "ISC",
-  "dependencies": {
-    "parcel-bundler": "^1.12.4"
-  },
+  "dependencies": {},
   "browserslist": [
     "since 2017-06"
-  ]
+  ],
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "parcel-bundler": "^1.12.4"
+  }
 }
