@@ -327,7 +327,7 @@ html.is-animating .transition-fade {
 
 .floating {
     font-size: 89px;
-    opacity: 10.0%;
+    opacity: 11%;
     position: absolute;
     user-select: none;
     z-index: 0;
