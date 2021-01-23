@@ -194,9 +194,14 @@ section {
     flex-wrap: wrap;
 }
 
-.single-column {
+#index .single-column {
     min-width: 20em;
     max-width: 43%;
+}
+
+.single-column {
+    min-width: 20em;
+    max-width: 30em;
 }
 
 .double-column {
@@ -514,11 +519,11 @@ html.is-animating .transition-fade {
 /*--Zentella Project Page*/
 
 #z-header {
-    animation: bounce-down 1.5s ease-out;
+    animation: bounce-down 1.7s ease-out;
 }
 
 #zentella-project main {
-    animation: fade-in 1s ease-out 2s forwards;
+    animation: fade-in 1s ease-in-out 1.7s forwards;
     opacity: 0;
 }
 
@@ -565,13 +570,21 @@ html.is-animating .transition-fade {
     border: 1px solid #707070;
 }
 
-#z-artwork {
+#z-artwork, #z-typography {
     scroll-snap-align: start;
 }
 
-#z-artwork figure {
-    margin-left: 5em;
-    margin-top: 5em;
+#z-artwork figure:first-of-type {
+    margin: 7em 0 7em 2em;
+}
+
+#z-artwork figure:last-of-type {
+    margin-left: 3em;
+    margin-top: 7em;
+}
+
+#zentella-project figcaption {
+    max-width: 40em;
 }
 
 #zentella-project figure:nth-child(2n) {
@@ -580,7 +593,6 @@ html.is-animating .transition-fade {
 
 #gif-process div div {
     display: flex;
-    justify-content: space-between;
 }
 
 #gif-process div div:nth-child(2n+1) {
@@ -594,7 +606,6 @@ html.is-animating .transition-fade {
 }
 
 #z-typography {
-    scroll-snap-align: start;
     margin-bottom: 10em;
 }
 
@@ -635,10 +646,6 @@ html.is-animating .transition-fade {
     text-align: center;
 }
 
-#z-typography figure figcaption {
-    max-width: 87%;
-}
-
 #z-typography .sample-text {
     font-size: 42px;
 }
@@ -677,10 +684,6 @@ html.is-animating .transition-fade {
 #z-screenshots div:last-of-type img {
     width: 33vw;
     border: 1px solid #707070;
-}
-
-#z-screenshots > img:first-child {
-
 }
 
 #zentella-project #contact-footer {
