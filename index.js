@@ -20,24 +20,47 @@ async function startAnimations() {
 //fade-in on home
 
 window.addEventListener('DOMContentLoaded', function() {
-    window.addEventListener('scroll', scrollFade)
+    window.addEventListener('scroll', scrollAnimations)
  })
 //add scrolling listener
 
 startAnimations();
 
-function scrollFade() {
-    const fadeElements = document.querySelectorAll('.hidden');
+function scrollAnimations() {
+    const fadeElements = document.querySelectorAll('#content-2');
+    
 
     fadeElements.forEach(function(e) {
         const eTop =  e.getBoundingClientRect().top;
 
-        if (eTop < window.innerHeight*0.6) {
-            e.classList.contains('visible') ? null : e.classList.add('visible');
+        if (eTop < window.innerHeight*0.6 && !(eTop < window.innerHeight*0)) {
+            if(!e.classList.contains('visible')){ 
+                e.classList.add('visible');
+            } 
+        } else if (eTop < window.innerHeight*0) {
+            e.classList.remove('visible');
         }
+//when < 60% of the viewport is above the top of a fade-in element, it will fade in
     })
+
+    const zBox = document.querySelector('#zentella-card');
+    const zContent = document.querySelector('#zentella-content');
+
+    const zTop =  zBox.getBoundingClientRect().top;
+    if (zTop <= 10) {
+        zContent.classList.add('z-box-bounce-up');
+        if (zContent.classList.contains('hidden')) {
+            zContent.classList.remove('hidden');
+            zContent.classList.add('visible');
+        }
+    } else if (zTop > window.innerHeight*0.5 && zContent.classList.contains('z-box-bounce-up')) {
+        zContent.classList.remove('z-box-bounce-up');
+        if (!zContent.classList.contains('hidden')) {
+            zContent.classList.add('hidden');
+            zContent.classList.remove('visible');
+        }
+    }
 }
-//when <= 40% of the viewport is above the top of a fade-in element, it will fade in
 
 const navIcon = document.querySelector("#nav-icon");
 

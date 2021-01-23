@@ -1,10 +1,37 @@
+/*Table of Contents
+
+    fonts
+    text elements
+    nav
+    lists
+        -alignment and sizing
+    animations
+        -swup transitions
+    sizing
+    opacity
+    ------------
+    page specific
+        --coming soon page
+        --home
+        --zentella project page
+    screen configurations
+*/
+
+body, html {
+    scroll-snap-type: y proximity;
+}
+
 /*fonts*/
+
+@import url("https://use.typekit.net/ghk0tik.css");
 
 @counter-style en-dash {
     system: fixed;
     symbols: '–';
     suffix: ' ';
 }
+
+
 
 /*text elements*/
 html {
@@ -16,21 +43,10 @@ h1 {
     font-family: minion-pro, serif;
     font-weight: 400;
     font-style: normal;
-    color: #F53B3B;
-    font-size: 26px;
-    line-height: 13px;
+    font-size: 34px;
 }
 
 h2 {
-    font-family: minion-pro-subhead, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 26px;
-    color: #3A3A3A;
-    line-height: 13px;
-}
-
-h3 {
     font-family: meno-banner, serif;
     font-weight: 400;
     font-style: normal;
@@ -51,6 +67,14 @@ p {
     font-size: 34;
 }
 
+figcaption {
+    font-family: minion-pro-caption, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin-top: 2em;
+}
+
 hr {
     color: #434343;
     width: 90%;
@@ -59,7 +83,7 @@ hr {
 }
 
 .small-caps {
-    font-variant-caps: small-caps;
+    font-variant-caps: all-small-caps;
     -moz-font-feature-settings: "smcp";
     -webkit-font-feature-settings: "smcp";
     font-feature-settings: "smcp";
@@ -75,6 +99,10 @@ a {
     font-family: minion-pro, serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.light {
+    font-weight: 300;
 }
 /*nav*/
 
@@ -124,7 +152,7 @@ nav ul {
 
 /*lists*/
 
-/*alignment and sizing*/
+/*-alignment and sizing*/
 .center-items {
     display: flex;
     align-items: center;
@@ -154,7 +182,7 @@ nav ul {
 }
 
 section {
-    padding: 5vh 15% 0 15%;
+    padding: 5vh 15% 0;
     box-sizing: border-box;
     display: block;
     overflow: hidden;
@@ -194,6 +222,18 @@ section {
 @keyframes slide-right {
     from {transform: translateX(-5em);}
     to {transform: translateX(0);}
+}
+
+@keyframes bounce-down {
+    from {transform: translateY(-120%);}  
+    60% {transform: translateY(15%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes bounce-up {
+    from {transform: translateY(100vh);}
+    60% {transform: translateY(-15%);}
+    to {transform: translateY(0);}
 }
 
 
@@ -269,11 +309,12 @@ html.is-animating .transition-fade {
 
 .hidden {
     opacity: 0;
-    transition: 2s ease-out opacity;
+    transition: 0.5s ease-out opacity;
 }
 
 .visible {
     opacity: 1;
+    transition: 2s ease-out opacity;
 }
 
 .blur {
@@ -282,12 +323,29 @@ html.is-animating .transition-fade {
 
 /*page specific*/
 
-/*-- coming-soon page*/
+/*--coming-soon page*/
 #coming-soon {
     height: 300px;
 }
 
 /*--home*/
+#anim-1 {
+    font-family: minion-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F53B3B;
+    font-size: 26px;
+    line-height: 13px;
+}
+
+#anim-2 {
+    font-family: minion-pro-subhead, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 26px;
+    color: #3A3A3A;
+    line-height: 13px;
+}
 
 #anim-1, #anim-2, #anim-3, #anim-4, #anim-5 {
     opacity: 0;
@@ -320,14 +378,15 @@ html.is-animating .transition-fade {
     z-index: 5;
 }
 
-#section-3 {
+#contact-footer {
     text-align: center;
     padding-bottom: 50px;
+    scroll-snap-align: end;
 }
 
 .floating {
     font-size: 89px;
-    opacity: 11%;
+    opacity: 10%;
     position: absolute;
     user-select: none;
     z-index: 0;
@@ -368,6 +427,268 @@ html.is-animating .transition-fade {
     animation: float5 40s linear both infinite alternate;
 }
 
+#z-header {
+    padding: 5vh 2vw 0;
+    width: 100%;
+    border: 1px solid #707070;
+    box-shadow: 0px 0px 5px #707070;
+    position: relative;
+}
+
+.z-box-bounce-up {
+    animation: bounce-up 1.5s ease-out;
+}
+
+#zentella-card {
+    padding: 1vh 0 0;
+    width: 100%;
+    scroll-snap-align: start; 
+}
+
+#index #zentella-content {
+    min-height: 600px; 
+    max-height: 100vh;
+    margin-bottom: 28vh;
+    border: 1px solid #707070;
+    box-shadow: 0px 0px 5px #707070;
+    padding: 5vh 2vw 0;
+    transition: opacity 2s;
+    position: relative;
+}
+
+.ten-mincho {
+    font-family: 'ten-mincho';
+    font-weight: 400;
+}
+
+#zentella-header {
+    font-size: 42px;
+    width: fit-content;
+    margin: 0 auto;
+    background-color:hsla(0, 0%, 100%, 80%);
+    border-radius: 10%;
+}
+
+#zentella-content img, #z-header img {
+    width: 150px;
+    z-index: -10;
+}
+
+#zentella-content img:nth-of-type(1), #z-header img:nth-of-type(1) {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    transform: rotate(-0.05turn);
+}
+
+#zentella-content img:nth-of-type(2), #z-header img:nth-of-type(2) {
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    transform: rotate(0.05turn);
+}
+
+.chaparral {
+    font-family: chaparral-pro;
+}
+
+.ten-mincho {
+    font-family: ten-mincho;
+}
+
+#zentella-content p, #z-header p {
+    width:fit-content;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    background-color:hsla(0, 0%, 100%, 80%);
+    border-radius: 10%;
+}
+
+#zentella-content a {
+    position: absolute;
+    bottom: 15%;
+    right: 33%;
+}
+
+/*--Zentella Project Page*/
+
+#z-header {
+    animation: bounce-down 1.5s ease-out;
+}
+
+#zentella-project main {
+    animation: fade-in 1s ease-out 2s forwards;
+    opacity: 0;
+}
+
+#zentella-project h3 {
+    font-family: ten-mincho;
+    font-size: 42px;
+    font-weight:400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#zentella-project p {
+    font-family: chaparral-pro;
+}
+
+#z-brief {
+    display:flex;
+    justify-content: space-between;
+    margin: 2em 0 10em;
+}
+
+
+
+#z-brief > p {
+    max-width: 60%;
+}
+
+#zentella-project hr {
+    width: 30%;
+    margin: 0 auto;
+    background-color: #707070;
+    border:none;
+    height: 1px;
+}
+
+#z-artwork {
+    margin-top: 3em;
+}
+
+#z-home-page {
+    width: 50vw;
+    margin: 10em auto;
+    display: block;
+    border: 1px solid #707070;
+}
+
+#z-artwork {
+    scroll-snap-align: start;
+}
+
+#z-artwork figure {
+    margin-left: 5em;
+    margin-top: 5em;
+}
+
+#zentella-project figure:nth-child(2n) {
+    margin-top: 10em;
+}
+
+#gif-process div div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#gif-process div div:nth-child(2n+1) {
+    margin-bottom:2em;
+}
+
+#gif-process img {
+    height: 120px;
+    margin: 0 auto;
+    display: block;
+}
+
+#z-typography {
+    scroll-snap-align: start;
+    margin-bottom: 10em;
+}
+
+#z-typography figure {
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+#z-typography figure > div {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 70vw;
+}
+
+#z-scale {
+    margin-top: 2em;
+}
+
+#z-scale > p {
+    margin-bottom: 0;
+}
+
+#z-scale-a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+}
+
+#z-scale div div {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#z-scale div span {
+    text-align: center;
+}
+
+#z-typography figure figcaption {
+    max-width: 87%;
+}
+
+#z-typography .sample-text {
+    font-size: 42px;
+}
+
+#z-screenshots {
+    margin-top: 3em;
+    scroll-snap-align: start;
+}
+
+#z-screenshots i {
+    display: block;
+    margin-left: 70%;
+    margin-bottom: 1em;
+    font-size: 21px;
+}
+
+#z-screenshots div:first-of-type {
+    width: 50vw;
+    margin: 0 auto 8em;
+    display:block;
+    overflow-y: scroll;
+    height: 28vw;
+    border: 1px solid #707070;
+}
+
+#z-screenshots div:first-of-type img {
+    width: 100%;
+}
+
+#z-screenshots div:last-of-type {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10em;
+}
+
+#z-screenshots div:last-of-type img {
+    width: 33vw;
+    border: 1px solid #707070;
+}
+
+#z-screenshots > img:first-child {
+
+}
+
+#zentella-project #contact-footer {
+    border-top: 1px solid gray;
+}
+
+/*screen configurations*/
+
 @media screen and (max-width: 480px) {
     .floating {
         color: #f2f2f2;
@@ -387,7 +708,7 @@ html.is-animating .transition-fade {
     .double-column {
         column-count: 1;
     }
-    h2 {
+    #anim-2 {
         line-height: normal;
     }
     ul  .open {

@@ -19,16 +19,31 @@
     <title>Brian H Do</title>
     <link rel="shortcut icon" href="./Assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ghk0tik.css"> <!--fonts-->
+    <!--Zentella font-->
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'gvs5qfq',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <style>
+        body, html {
+            scroll-snap-stop: always;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <img id="nav-icon" src="Assets/Asset 1.svg">
+        <img id="nav-icon" src="./Assets/menu.svg">
         <ul>
             <li class="nav-item closed"><a href="./index.html"><p>Home</p></a></li>
         </ul>
     </nav>
-    <main class="center-row">
+    <main class="center-row" id="index">
         <section id="section-1">
             <header>
                 <h1 class="em-indent small-caps" id="anim-1">brian h do</h1>
@@ -52,7 +67,7 @@
             </div>
         </section>
         <section id="section-2">
-            <h3 id="anim-5">Philosophy.</h3>
+            <h2 id="anim-5">Philosophy.</h2>
             <p id="content-2" class="double-column hidden">I think the best – businesses, people, ideas – are
                 led by goals and virtues, not by empty showmanship. 
                 Good design should help in the same 
@@ -68,11 +83,19 @@
                 <p class="floating bold blur" id="l5">h</p>
             </div>
         </section>
-        <section id="section-3">
-            <h2 class="small-caps">good things are coming.</h2>
-            <br><p>Care to join?</p>
-            <br><br>
-            <p class="cap">Let's talk.  <span id="v-inline">|</span>  <a href="mailto:brianhdo@outlook.com">brianhdo@outlook.com</a></p>
+        <section id="zentella-card">
+            <div id="zentella-content" class="hidden">
+                <h2>Projects.</h2>
+                <h3 id="zentella-header" class="ten-mincho">Zentella</h3>
+                <img id="" src="./Assets/Zentella/SVG/pig-colored.svg">
+                <img src="./Assets/Zentella/SVG/centella-colored.svg">
+                <p class="chaparral">Organic, playful concept <br>
+                    for a beauty brand.</p>
+                <a href="./Zentella.html"><p class="chaparral">Read more.</p></a>
+            </div>
+        </section> 
+        <section id="contact-footer">
+            <p class="cap">Work with me:  <span id="v-inline">|</span>  <a href="mailto:brianhdo@outlook.com">brianhdo@outlook.com</a></p>
         </section>
     </main>
 </body>
