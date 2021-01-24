@@ -2,7 +2,6 @@
   "name": "Site-files",
   "version": "1.0.0",
   "description": "Personal portfolio",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build index.html"
@@ -15,7 +14,13 @@
     "since 2017-06"
   ],
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "parcel-bundler": "^1.12.4"
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "parcel-bundler": "^1.12.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0"
   }
 }

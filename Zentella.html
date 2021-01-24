@@ -6,7 +6,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCPVF0Y761"></script>
     <title>Concept - Zentella</title>
-    <script defer src="index.js" type="text/javascript"></script>
+    <script defer src="./src/index.js" type="text/javascript"></script>
     <!--Zentella font-->
     <script>
         (function(d) {
@@ -18,15 +18,17 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
       </script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body id="zentella-project">
     <nav>
         <img id="nav-icon" src="./Assets/menu.svg">
         <ul>
             <li class="nav-item closed"><a href="./index.html"><p>Home</p></a></li>
+            <li class="nav-item closed"><a href="./Zentella.html"><p>Concept - Zentella</p></a></li>
         </ul>
     </nav>
+    <div id="z-card-unveil"></div>
     <section id="z-header" style="height: 500px">
         <h2>Projects.</h2>
         <h3 id="zentella-header" class="ten-mincho">Zentella</h3>
@@ -158,22 +160,22 @@
         <section id="z-screenshots">
             <i class="light">(Scroll me)</i>
             <div>
-                <img src="./Assets/Zentella/screenshots/about page.jpeg">
+                <img id="img-1" src="./Assets/Zentella/screenshots/about page.jpeg">
             </div>
             <div>
-                <img src="./Assets/Zentella/screenshots/shop page.jpeg">
-                <img src="./Assets/Zentella/screenshots/values page.jpeg">
+                <img id="img-2" src="./Assets/Zentella/screenshots/shop page.jpeg">
+                <img id="img-3" src="./Assets/Zentella/screenshots/values page.jpeg">
             </div>
         </section>
         <hr>
         <section id="z-summary">
-            <p class="single-column">Working on this concept gave me a 
-                chance to experiment with vector illustrations and Shopify. 
+            <p class="single-column">With this concept, I was able to 
+                experiment with vector illustrations and Shopify. 
                 After playing with 
                  Shopify's theme language and structure, as well as 
                  experimenting with the general Adobe CC suite, I'm curious 
                  to expand on this kind of playfulness in future projects 
-                 - potentially with added color and animations.</p>
+                 - for example, with added color and animations.</p>
         </section>
         <section id="contact-footer">
             <p class="cap">Work with me:  <span id="v-inline">|</span>  <a href="mailto:brianhdo@outlook.com">brianhdo@outlook.com</a></p>
