@@ -108,7 +108,7 @@ a {
 /*nav*/
 
 nav {
-    width:100%;
+    right: 0;
     position:fixed;
     z-index:99;
     top:0;
@@ -122,6 +122,7 @@ nav img {
     width:28px;
     right:4vw;
     top:4vh;
+    z-index: 98;
 }
 
 nav img:hover {
@@ -132,19 +133,21 @@ nav img:hover {
 nav ul {
     position:relative;
     list-style:none;
-    right:calc(4vw + 1em);
+    padding-right:calc(4vw + 1em);
     padding-top:3em;
+    padding-left:0;
     text-align: right;
+    z-index:97;
 }
 
-.closed {
+ul .closed {
     opacity: 0;
     transform: translateY(-3em);
     transition: 0.8s ease-in-out;
     visibility: hidden;
 }
 
-.open {
+ul .open {
     opacity: 1;
     transform: translateY(0);
     transition: 1s ease-in-out;
@@ -395,7 +398,8 @@ html.is-animating .transition-fade {
 
 #section-2 {
     background-color:  hsl(45, 100%, 99%);
-    margin: 0 4% 4em 0;
+    margin-bottom: 4em;
+    padding-right: 17%;
     min-height: 27em;
     position: relative;
 }
@@ -463,6 +467,10 @@ html.is-animating .transition-fade {
 
 .z-box-bounce-up {
     animation: bounce-up 1.5s ease-out;
+}
+
+#projects-tag a {
+    text-decoration: none;
 }
 
 #zentella-card {
@@ -740,6 +748,13 @@ html.is-animating .transition-fade {
     #v-inline {
         display: none;
     }
+    #z-brief > p {
+        max-width: 30em;
+    }
+    #z-brief div {
+        margin: 2em auto 0;
+        text-align: center;
+    }
     #zentella-content img:nth-of-type(1), #z-header img:nth-of-type(1) {
         left: 0%;
         top: 50%;
@@ -773,10 +788,8 @@ html.is-animating .transition-fade {
     #anim-2 {
         line-height: normal;
     }
-    ul  .open {
-        width: 4em;
+    li[class='nav-item open'] {
         right: 0;
-        position: absolute;
     }
 }
 
@@ -784,7 +797,22 @@ html.is-animating .transition-fade {
     #b-sig {
         margin: 0 10% 10%;
     }
-    .single-column {
+    #index .single-column {
         max-width: 80%;
+    }
+    nav ul {
+        width: 100vw;
+        padding-bottom: 0.5em;
+        padding-right: 0;
+        text-align: center;
+        transition: 1.5s ease-out;
+    }
+    nav[class~="open"] {
+        background-color: white;
+        transition: 0.5s ease-out;
+    }
+    nav ul[class~="open"] {
+        background-color: white;
+        transition: 0.5s ease-out;
     }
 }

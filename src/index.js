@@ -32,12 +32,13 @@ function scrollAnimations() {
 
     fadeElements.forEach(function(e) {
         const eTop =  e.getBoundingClientRect().top;
+        const eBottom =  e.getBoundingClientRect().bottom;
 
         if (eTop < window.innerHeight*0.6 && !(eTop < window.innerHeight*0)) {
             if(!e.classList.contains('visible')){ 
                 e.classList.add('visible');
             } 
-        } else if (eTop < window.innerHeight*0) {
+        } else if ((eTop < window.innerHeight*0 && window.innerHeight >= 830) || eBottom < window.innerHeight*0.4 && window.innerHeight < 830) {
             e.classList.remove('visible');
         }
 //when < 60% of the viewport is above the top of a fade-in element, it will fade in
@@ -68,6 +69,16 @@ navIcon.addEventListener('click', openMenu);
 
 async function openMenu() {
     const navItem = document.querySelectorAll('.nav-item');
+    const nav = document.querySelector('nav');
+    const navUl = document.querySelector('nav ul');
+
+    if (!nav.classList.contains('open')) {
+        nav.classList.add('open');
+        navUl.classList.add('open');
+    } else {
+        nav.classList.remove('open');
+        navUl.classList.remove('open');
+    }
 
     for (let i=0; i<navItem.length; i++){
         let e = navItem[i];
