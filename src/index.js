@@ -38,9 +38,9 @@ function scrollAnimations() {
             if(!e.classList.contains('visible')){ 
                 e.classList.add('visible');
             } 
-        } else if ((eTop < window.innerHeight*0 && window.innerHeight >= 830) || eBottom < window.innerHeight*0.4 && window.innerHeight < 830) {
+        } /*else if ((eTop < window.innerHeight*0 && window.innerHeight >= 830) || eBottom < window.innerHeight*0.4 && window.innerHeight < 830) {
             e.classList.remove('visible');
-        }
+        }*/
 //when < 60% of the viewport is above the top of a fade-in element, it will fade in
     })
 
@@ -54,13 +54,13 @@ function scrollAnimations() {
             zContent.classList.remove('hidden');
             zContent.classList.add('visible');
         }
-    } else if (zTop > window.innerHeight*0.5 && zContent.classList.contains('z-box-bounce-up')) {
-        zContent.classList.remove('z-box-bounce-up');
-        if (!zContent.classList.contains('hidden')) {
-            zContent.classList.add('hidden');
-            zContent.classList.remove('visible');
-        }
-    }
+    } /*else if (zTop > window.innerHeight*0.5 && zContent.classList.contains('z-box-bounce-up')) {
+            zContent.classList.remove('z-box-bounce-up');
+            if (!zContent.classList.contains('hidden')) {
+                zContent.classList.add('hidden');
+                zContent.classList.remove('visible');
+            }
+        }*/
 }
 
 const navIcon = document.querySelector("#nav-icon");
