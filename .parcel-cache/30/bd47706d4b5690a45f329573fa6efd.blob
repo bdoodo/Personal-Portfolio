@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="02b27398597690b837dc54f2d5b0a9f1"></script>
+    <title>Concept - Zentella</title>
+    <script defer="" src="e56d6d4b7af410e3a72367803cf32019" type="text/javascript"></script>
+    <!--Zentella font-->
+    <script data-parcel-key="46da615ecbcb5855d554157308cbf302">
+        (function(d) {
+          var config = {
+            kitId: 'gvs5qfq',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <link rel="stylesheet" href="9b6009342f784d3c5e6ddd213b2f55c2">
+</head>
+<body id="zentella-project">
+    <nav>
+        <img id="nav-icon" src="4aed6f7351f2a6aeae3bb59f86259893">
+        <ul>
+            <li class="nav-item closed"><a href="bb59450d972e0d316bcd7b6547b2aa07"><p>Home</p></a></li>
+            <li class="nav-item closed"><a href="afec1b02dcab6dca668a5440bb917892"><p>Concept - Zentella</p></a></li>
+        </ul>
+    </nav>
+    <div id="z-card-unveil"></div>
+    <section id="z-header" style="height: 500px">
+        <h2 id="projects-tag"><a href="776d2769480e301854790e2bbbd3b250">Projects.</a></h2>
+        <h3 id="zentella-header" class="ten-mincho">Zentella</h3>
+        <img src="663f9cf60ac0e8e54211ad54795500eb">
+        <img src="91e5d1ffdb13d4cc9f2acedd73cb8fe7">
+        <p class="chaparral">Organic, playful concept <br>
+            for a beauty brand.</p>
+    </section>
+    <main>      
+        <section id="z-brief">
+            <p>Zentella was an emerging beauty brand focused on ethics 
+                and sustainability as much as it was on quality. In a 
+                sea of mass-commercial products, I wanted to create 
+                branding elements to give the website its 
+                own personality while staying grassroots.</p>
+            <div>
+                <h3>Role</h3>
+                <p><span class="small-caps" style="letter-spacing: 2px;">UI/UX</span> <br>
+                    Illustrations<br>
+                    <span class="small-caps" style="letter-spacing: 2px;">HTML/CSS/</span>Liquid</p>
+            </div>
+        </section>
+        <hr>
+        <section id="z-artwork">
+            <h3>Artwork</h3>
+            <p class="single-column">To build on the existing branding material and the 
+                founder's own personality, I chose the theme words 
+                <i>quiet, feminine,</i> and <i>playful.</i> Hand-drawn illustrations 
+                provide a part of this feel: Free, loose forms keep 
+                them personal rather than mechanical.</p>
+
+            <figure id="gif-process">
+                <div>
+                    <div>
+                        <p class="light">Sketch</p>
+                        <img src="983d1b9dd39b47d5cef57445ccfdb5a7">
+                    </div>
+                    <div>
+                        <p class="light">Final GIF</p>
+                        <img src="5327ce7027b43f4f58104b0018eb9a4f">
+                    </div>
+                </div>
+            </figure>
+            <p class="single-column">This GIF is meant to symbolize decomposition. Because 
+                    Zentella's products have compostable packaging, it 
+                    builds on the theme of sustainability, a core 
+                    idea behind the brand.</p>
+
+            <figure>
+                <img src="08779f3832775b19ceb04ef4a49e212e">
+                <figcaption>Flower icons impart environmentalism and natural 
+                    ingredients. Simple silhouettes carry a freeform touch, 
+                    and splotched colors give a sense of DIY creation.</figcaption>         
+            </figure>
+            <video id="z-home-page" autoplay="" loop="" muted="">
+                <source src="16297146ea4aefca0090984f0263671d" type="video/mp4">
+                Recording of home page concept.
+            </video>
+        </section>
+        <section id="z-typography">
+            <h3>Typography</h3>
+            <p class="single-column">Typography is one of my main considerations; in the 
+                space of the page designated for "lorem ipsum …," 
+                it carries the voice of a brand, and styles the 
+                page itself. For a feminine tone, I started my 
+                search with female typographers and narrowed it 
+                with other criteria listed in the caption below.</p>
+
+                <figure>
+                    <div>
+                        <div>
+                            <p><span class="sample-text">abcdefghijklmnop 123 AQ <i>abcdefghijklmnop</i></span><br>
+                                Chaparral Pro - body</p>
+                            <p><span class="sample-text ten-mincho">abcdefghijklmnop 123 AQ</span><br>
+                                Ten Mincho - header</p>   
+                        </div>
+
+                        <div id="z-scale">
+                            <p>Scale</p>
+                            <div id="z-scale-a">
+                                <div>
+                                    <span style="font-size: 16px;">a</span>
+                                    16
+                                </div>
+                                <div>
+                                    <span style="font-size: 18px;">a</span>
+                                    18
+                                </div>
+                                <div>
+                                    <span style="font-size: 21px;">a</span>
+                                    21
+                                </div>
+                                <div>
+                                    <span style="font-size: 24px;">a</span>
+                                    24
+                                </div>
+                                <div>
+                                    <span style="font-size: 36px;">a</span>
+                                    36
+                                </div>
+                                <div>
+                                    <span style="font-size: 48px;">a</span>
+                                    48
+                                </div>
+                                <div>
+                                    <span style="font-size: 60px;">a</span>
+                                    60
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>I chose typefaces which were serifed 
+                            and drawn with humanistic axes for a human 
+                            touch. Both are smart, although Chaparral 
+                            owes its name to relaxed California foothills, 
+                            while Ten Mincho balances it with a more 
+                            serious nature.</figcaption>
+                </figure>
+                
+                    
+                <p class="single-column">I believe typographic details matter 
+                    - the balancing of light and heavier weights, emphasis 
+                    with italics or drop-caps, paragraph indentations, 
+                    and added visual interest to break up text. These small 
+                    details lead to a lasting professional image.</p>
+        </section>
+        <hr>
+        <section id="z-screenshots">
+            <i class="light">(Scroll me)</i>
+            <div>
+                <img id="img-1" src="64263dee1c8c9e0917b7dca5c1270cda">
+            </div>
+            <div>
+                <img id="img-2" src="46fc8b145aa27f06a21e765917704954">
+                <img id="img-3" src="473f4f710753bc51b9c614908769e6d6">
+            </div>
+        </section>
+        <hr>
+        <section id="z-summary">
+            <p class="single-column">With this concept, I was able to 
+                experiment with vector illustrations and Shopify. 
+                After playing with 
+                 Shopify's theme language and structure, as well as 
+                 experimenting with the general Adobe CC suite, I'm curious 
+                 to expand on this kind of playfulness in future projects 
+                 - for example, with added color and animations.</p>
+        </section>
+        <section id="contact-footer">
+            <p class="cap">Work with me:  <span id="v-inline">|</span>  <a href="4f7e950acb1f36108eef260b98886ecf">hello@brianhdo.com</a></p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,5 +1,0 @@
-﻿{
-  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
-  "Domain": "brianhdo.com",
-  "Id": "1d38396d-56d5-441b-9a27-e5b013905e6d"
-}
