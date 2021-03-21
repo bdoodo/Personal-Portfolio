@@ -29,6 +29,9 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
 
     startAnimations();
 
+    let zAnimated = false
+    let vAnimated = false
+
     function scrollAnimations() {
         const fadeElements = document.querySelectorAll('#content-2');
         
@@ -37,19 +40,22 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
             const eTop =  e.getBoundingClientRect().top;
             const eBottom =  e.getBoundingClientRect().bottom;
 
+            //when < 60% of the viewport is above the top of a fade-in element, it will fade in
             if (eTop < window.innerHeight*0.6 && !(eTop < window.innerHeight*0)) {
                 if(!e.classList.contains('visible')){ 
                     e.classList.add('visible');
                 } 
             } 
-    //when < 60% of the viewport is above the top of a fade-in element, it will fade in
         })
 
         const zBox = document.querySelector('#zentella-card');
         const zContent = document.querySelector('#zentella-content');
+        let indexMql = window.matchMedia('(max-width: 1050px)')
+        const clearance = indexMql.matches ? window.innerHeight * 0.7 : 10
 
         const zTop =  zBox.getBoundingClientRect().top;
-        if (zTop <= 10) {
+        if (!zAnimated && zTop <= clearance) {
+            zAnimated = true
             zContent.classList.add('z-box-bounce-up');
             if (zContent.classList.contains('hidden')) {
                 zContent.classList.remove('hidden');
@@ -58,9 +64,8 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
         } 
 
         const vBox = document.querySelector('#vegoons-card')
-        let vAnimated = false
 
-        if (!vAnimated && vBox.getBoundingClientRect().top <= 10) {
+        if (!vAnimated && vBox.getBoundingClientRect().top <= clearance) {
             vBox.animate(
                 [{opacity: 1}],
                 {
@@ -75,43 +80,59 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
 }
 
 //menu functions
+
+let mql = window.matchMedia('(max-width: 1050px)')
 const navIcon = document.querySelector("#nav-icon");
 navIcon.addEventListener('click', openMenu);
+let open = false
+
+//--animations
+
+const fadeIn = [
+    {opacity: 0},
+    {opacity: 1}
+]
+const slideDown = [
+    {transform: 'translateY(-3em)'},
+    {transform: 'translateY(0)'}
+]
 
 async function openMenu() {
-    const navItem = document.querySelectorAll('.nav-item');
-    const nav = document.querySelector('nav');
-    const navUl = document.querySelector('nav ul');
+    const navItem = document.querySelectorAll('nav ul li')
+    const navUl = document.querySelector('nav ul')
+    const nav = document.querySelector('nav')
 
-    if (!nav.classList.contains('open')) {
-        nav.classList.add('open');
-        navUl.classList.add('open');
-        navUl.classList.remove('no-display')
-    } else {
-        nav.classList.remove('open');
-        navUl.classList.remove('open');
-    }
+    if (!open) {
+        open = !open
+        navUl.style.display = 'block'
 
-    for (let i=0; i<navItem.length; i++){
-        let e = navItem[i];
-
-        //give a slight delay so the first menu item has time to animate. Yes this is kind of hacky
-        await timer(10)
-
-        if (e.classList.contains('closed')) {
-            e.classList.add('open');
-            e.classList.remove('closed');
-            await timer(200);
-        } else {
-            e.classList.add('closed');
-            e.classList.remove('open');
-            await timer(200);
+        if (mql.matches) {
+            navUl.style.backgroundColor = 'white'
+            nav.style.backgroundColor = 'white'
         }
 
-        //when the last item is removed (on closing) set the ul display to none
-        if (i === navItem.length - 1 && !nav.classList.contains('open')) {
-            await timer(800)
-            navUl.classList.add('no-display')
+        navUl.animate(fadeIn, {duration: 400})
+        nav.animate(fadeIn, {duration: 400})
+
+        for (let i = 0; i < navItem.length; i++) {
+            const e = navItem[i]
+
+            e.animate(fadeIn, {duration: 300, easing: 'ease-out', fill: 'forwards'})
+            e.animate(slideDown, {duration: 300, easing: 'ease-out', fill: 'forwards'})
+            await timer(200)
+        }
+    } else {
+        open = !open
+        navUl.animate(fadeIn, {direction: 'reverse', duration: navItem.length * 300})
+        nav.animate(fadeIn, {direction: 'reverse', duration: navItem.length * 300})
+        for (let i = 0; i < navItem.length; i++) {
+            const e = navItem[i]
+
+            e.animate(fadeIn, {duration: 200, easing: 'ease-out', fill: 'forwards', direction: 'reverse'})
+            e.animate(slideDown, {duration: 200, easing: 'ease-out', fill: 'forwards', direction: 'reverse'})
+            await timer(200)
+
+            if (i === navItem.length - 1) navUl.style.display = 'none'
         }
     }
 }

@@ -1,6 +1,9 @@
+/*fonts*/
+@import url("https://use.typekit.net/ghk0tik.css");
+@import url('https://use.typekit.net/uch0ebh.css'); /*vegoons*/
+
 /*Table of Contents
 
-    fonts
     text elements
     nav
     lists
@@ -22,10 +25,7 @@ body, html {
     margin: 0;
 }
 
-/*fonts*/
 
-@import url("https://use.typekit.net/ghk0tik.css");
-@import url('https://use.typekit.net/uch0ebh.css'); /*vegoons*/
 
 @counter-style en-dash {
     system: fixed;
@@ -144,6 +144,7 @@ nav ul {
     padding-left:0;
     text-align: right;
     z-index:97;
+    display: none;
 }
 
 nav ul[class~='open'] {
@@ -528,16 +529,8 @@ section {
     }
 }
 
-#z-header {
-    padding: 5vh 2vw 0;
-    width: 100%;
-    border: 1px solid #707070;
-    box-shadow: 0px 0px 5px #707070;
-    position: relative;
-}
-
 .z-box-bounce-up {
-    animation: bounce-up 1.5s ease-out;
+    animation: bounce-up 1.3s ease-out;
 }
 
 
@@ -625,7 +618,7 @@ section {
     background-color: white;
     border: 1px solid #707070;
     box-shadow: 0px 0px 5px #707070;
-    animation: unveil-down 1s forwards 1.7s;
+    animation: unveil-down 1s forwards 0.9s;
     position: fixed;
     bottom:0;
     height: 100%;
@@ -634,9 +627,14 @@ section {
 }
 
 #z-header {
-    animation: bounce-down 1.7s ease-out;
+    animation: bounce-down 1.2s ease-out;
     z-index:2;
     background-color: white;
+    padding: 5vh 2vw 0;
+    width: 100%;
+    border: 1px solid #707070;
+    box-shadow: 0px 0px 5px #707070;
+    position: relative;
 }
 
 #zentella-project h3 {
@@ -1035,6 +1033,9 @@ section {
     }
     li[class='nav-item open'] {
         right: 0;
+    }
+    body, html {
+        scroll-snap-type: none;
     }
 }
 
