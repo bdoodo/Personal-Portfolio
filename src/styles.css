@@ -13,6 +13,7 @@
     page specific
         --home
         --zentella project page
+        --vegoons
     screen configurations
 */
 
@@ -145,17 +146,25 @@ nav ul {
     z-index:97;
 }
 
+nav ul[class~='open'] {
+    display: block;
+}
+
+.no-display {
+    display: none;
+}
+
 ul .closed {
     opacity: 0;
     transform: translateY(-3em);
-    transition: 0.8s ease-in-out;
-    visibility: hidden;
+    transition: 0.8s ease-out;
+    display: hidden;
 }
 
 ul .open {
     opacity: 1;
     transform: translateY(0);
-    transition: 1s ease-in-out;
+    transition: 1s ease-out;
     visibility: visible;
 }
 
@@ -380,6 +389,7 @@ section {
     color: #F53B3B;
     font-size: 26px;
     line-height: 13px;
+    margin-left: 1em;
 }
 
 #anim-2 {
@@ -388,6 +398,7 @@ section {
     font-style: normal;
     font-size: 26px;
     color: #3A3A3A;
+    margin-left: 1em;
 }
 
 #anim-1, #anim-2, #anim-3, #anim-4, #anim-5 {
@@ -440,7 +451,7 @@ section {
 
 .floating {
     font-size: 89px;
-    opacity: 10%;
+    opacity: 0.1;
     position: absolute;
     user-select: none;
     z-index: 0;
@@ -529,9 +540,11 @@ section {
     animation: bounce-up 1.5s ease-out;
 }
 
+
+
 #projects-tag a {
     text-decoration: none;
-    font-family: 'meno-banner'
+    font-family: 'meno-banner';
 }
 
 #zentella-card {
@@ -606,7 +619,7 @@ section {
     right: 33%;
 }
 
-/*--Zentella Project Page*/
+/*--zentella Project Page*/
 
 #z-card-unveil {
     background-color: white;
@@ -791,14 +804,24 @@ section {
     border-top: 1px solid gray;
 }
 
+@media screen and (max-width: 430px) {
+    #z-typography figure {
+        margin-left: 0
+    }
+}
+
 /*--vegoons project page*/
 
 #vegoons .small-caps {
     letter-spacing: 1px;
 }
 
+#vegoons #projects-tag {
+    padding-left: 2vw; 
+}
+
 #vegoons header {
-    margin-top: 7em;
+    margin-top: 6em;
     box-shadow: 0 3px 3px lightgrey;
     opacity: 0;
     animation: fade-in 0.2s ease-out 0.3s forwards, scale-down 0.2s ease-out 0.3s;
@@ -901,7 +924,7 @@ section {
     content: '* ';
 }
 
-#vegoons li {
+#vegoons #v2 li {
     font-size: 21px;
     font-family: 'Karmina';
     margin-bottom: 0.5em;
@@ -954,9 +977,6 @@ section {
 /*screen configurations*/
 
 @media screen and (max-width: 400px) {
-    .floating {
-        color: #f2f2f2;
-    }
     #b-sig {
         position: relative;
         right: 40px;
@@ -969,6 +989,9 @@ section {
     }
     #content-1 {
         margin-top: 5em;
+    }
+    #section-2 {
+        padding-right: 1em;
     }
     #z-brief > p {
         max-width: 30em;

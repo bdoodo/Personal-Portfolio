@@ -30,16 +30,11 @@
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
     </script>
-    <style>
-        body, html {
-            scroll-snap-stop: always;
-        }
-    </style>
 </head>
 <body>
     <nav>
         <img id="nav-icon" src="/Assets/menu.svg">
-        <ul>
+        <ul class='no-display'>
             <li class="nav-item closed"><a href="/index.html"><p>Home</p></a></li>
             <li class="nav-item closed"><a href="/src/Zentella.html"><p>Concept - Zentella</p></a></li>
             <li class="nav-item closed"><a href="/src/vegoons.html"><p>Mobile Web App - Vegoons</p></a></li>
@@ -48,9 +43,9 @@
     <main id="index">
         <section id="section-1">
             <header>
-                <h1 class="em-indent small-caps" id="anim-1">brian h do</h1>
+                <h1 class="small-caps" id="anim-1">brian h do</h1>
                 <hr noshade="" id="anim-3">
-                <h2 class="em-indent" id="anim-2">UX focused Front-end Web Developer</h2>
+                <h2 id="anim-2">UX focused Front-end Web Developer</h2>
             </header>
             <div id="content-1">
                 <div class="space-around">
@@ -59,12 +54,12 @@
                     </div>
                     <div class="single-column" id="anim-4">
                         <p>
-                            Designing and building web apps that mean 
-                            something. I'm primarily focused on front-end
-                            development and working with serverless 
+                            Designing and building meaninful web apps. 
+                            I'm primarily focused on front-end
+                            development and serverless 
                             technologies, but I'm also passionate 
-                            about development's deep connection to 
-                            <span class='small-caps' style='letter-spacing: 1px;'>ux</span> and design.
+                            about designing with intelligent
+                            <span class='small-caps' style='letter-spacing: 1px;'>ux</span>.
                         </p>
                         <a href='https://github.com/bdoodo'><img class='icon' src='/Assets/icons/github.svg'/></a>
                         <a href='https://www.linkedin.com/in/brianhhdo/'><img class='icon' src='/Assets/icons/linkedIn.svg' style='margin-left: 1em'/></a>

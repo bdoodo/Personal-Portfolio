@@ -14,14 +14,14 @@
 <body id='vegoons'>
   <nav>
     <img id="nav-icon" src="/Assets/menu.svg">
-    <ul>
+    <ul class='no-display'>
         <li class="nav-item closed"><a href="../index.html"><p>Home</p></a></li>
         <li class="nav-item closed"><a href="./Zentella.html"><p>Concept - Zentella</p></a></li>
         <li class="nav-item closed"><a href="./vegoons.html"><p>Mobile Web App - Vegoons</p></a></li>
     </ul>
   </nav>
   <header>
-    <h2 id="projects-tag" style='padding-left: 2vw; margin-top: -1em'><a href="../index.html#vegoons-card">Projects.</a></h2>
+    <h2 id="projects-tag"><a href="../index.html#vegoons-card">Projects.</a></h2>
     <div class='flex-wrap' style='justify-content: center'>
       <div>
         <h1>Vegoons</h1>
@@ -160,13 +160,17 @@
         the client.</span>
       </p>
       <div style='display: flex; flex-wrap: wrap;'>
-        <figure style='flex: 1 1;'>
+        <figure style='flex: 1;'>
           <p style='font-family: Sutro;'>Open now:</p>
-          <img src='/Assets/Vegoons/restaurant-card.png' style='max-height: 250px;'/>
+          <div style='min-width: 250px;'>
+            <img src='/Assets/Vegoons/restaurant-card.png' style='max-width: 100%;'/>
+          </div>
         </figure>
-        <figure style="flex: 1 1;">
+        <figure style="flex: 1;">
           <p style='font-family: Sutro;'>Hot in the kitchen:</p>
-          <img src='/Assets/Vegoons/recipe-card.png' style='max-height: 250px;'/>
+          <div style='min-width: 250px;'>
+            <img src='/Assets/Vegoons/recipe-card.png' style='max-width: 100%;'/>
+          </div>
         </figure>
       </div>
       <hr style='margin: 7em 0 3em'/>

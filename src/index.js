@@ -86,6 +86,7 @@ async function openMenu() {
     if (!nav.classList.contains('open')) {
         nav.classList.add('open');
         navUl.classList.add('open');
+        navUl.classList.remove('no-display')
     } else {
         nav.classList.remove('open');
         navUl.classList.remove('open');
@@ -93,14 +94,24 @@ async function openMenu() {
 
     for (let i=0; i<navItem.length; i++){
         let e = navItem[i];
+
+        //give a slight delay so the first menu item has time to animate. Yes this is kind of hacky
+        await timer(10)
+
         if (e.classList.contains('closed')) {
             e.classList.add('open');
             e.classList.remove('closed');
-            await timer(300);
+            await timer(200);
         } else {
             e.classList.add('closed');
             e.classList.remove('open');
-            await timer(300);
+            await timer(200);
+        }
+
+        //when the last item is removed (on closing) set the ul display to none
+        if (i === navItem.length - 1 && !nav.classList.contains('open')) {
+            await timer(800)
+            navUl.classList.add('no-display')
         }
     }
 }
