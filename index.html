@@ -16,7 +16,7 @@
     <!--lottie player-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script defer src="/src/index.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="stylesheet" href="/src/styles.css">
     <title>Brian H Do</title>
     <link rel="shortcut icon" href="/Assets/favicon.png" type="image/x-icon">
     <!--Zentella font-->
@@ -29,7 +29,7 @@
           },
           h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
         })(document);
-      </script>
+    </script>
     <style>
         body, html {
             scroll-snap-stop: always;
@@ -40,8 +40,9 @@
     <nav>
         <img id="nav-icon" src="/Assets/menu.svg">
         <ul>
-            <li class="nav-item closed"><a href="./index.html"><p>Home</p></a></li>
-            <li class="nav-item closed"><a href="./Zentella.html"><p>Concept - Zentella</p></a></li>
+            <li class="nav-item closed"><a href="/index.html"><p>Home</p></a></li>
+            <li class="nav-item closed"><a href="/src/Zentella.html"><p>Concept - Zentella</p></a></li>
+            <li class="nav-item closed"><a href="/src/vegoons.html"><p>Mobile Web App - Vegoons</p></a></li>
         </ul>
     </nav>
     <main id="index">
@@ -49,7 +50,7 @@
             <header>
                 <h1 class="em-indent small-caps" id="anim-1">brian h do</h1>
                 <hr noshade="" id="anim-3">
-                <h2 class="em-indent" id="anim-2">Digital Design and Front-End Website Development</h2>
+                <h2 class="em-indent" id="anim-2">UX focused Front-end Web Developer</h2>
             </header>
             <div id="content-1">
                 <div class="space-around">
@@ -57,25 +58,41 @@
                         <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_4e9rlhzf.json" background="transparent" speed="1" style="width:300px;height:300px;" autoplay></lottie-player>
                     </div>
                     <div class="single-column" id="anim-4">
-                        <p>Designing <em>humanistic</em> brands whose ideals
-                            withstand trends. My designs start from
-                            drafts, and continue through development
-                            and guidelines for future use. I believe in 
-                            maximal storytelling through minimal
-                            aesthetics.</p>
+                        <p>
+                            Designing and building web apps that mean 
+                            something. I'm primarily focused on front-end
+                            development and working with serverless 
+                            technologies, but I'm also passionate 
+                            about development's deep connection to 
+                            <span class='small-caps' style='letter-spacing: 1px;'>ux</span> and design.
+                        </p>
+                        <a href='https://github.com/bdoodo'><img class='icon' src='/Assets/icons/github.svg'/></a>
+                        <a href='https://www.linkedin.com/in/brianhhdo/'><img class='icon' src='/Assets/icons/linkedIn.svg' style='margin-left: 1em'/></a>
                     </div>
                 </div>
             </div>
         </section>
         <section id="section-2">
             <h2 id="anim-5">Philosophy.</h2>
-            <p id="content-2" class="double-column hidden">I think the best – businesses, people, ideas – are
-                led by goals and virtues, not by empty showmanship. 
-                Good design should help in the same 
-                way: to clarify a message, rather than to distort 
-                or parade it. I work with
-                brands whose values are best stated clearly and honestly.
-               Simplicity not for its own sake, but for the sake of comfortably and honestly sharing missions and values. </p>
+            <div id='content-2' class='double-column hidden'>
+                <p>
+                    Designs influence cultures and the way we live with and talk to one 
+                    another. That's powerful, and to accommodate this, good design 
+                    should be purposeful: Strong when needed, hidden when not, yet 
+                    always backed with intention. 
+                </p>
+                <p>
+                    As something functional, I see <span class='small-caps'>ux</span> 
+                    design as intertwined with development, in the way that architecture 
+                    is intertwined with the engineering and construction that follows. 
+                    This was my own entry into web development: To see it as a tool of 
+                    digital design, necessary yet not less interesting.
+                </p>
+                <p>
+                    Mainly, I'm passionate about the future of the web, especially as 
+                    it'll evolve on the Jamstack.
+                </p>
+            </div>
             <div id="letters">
                 <p class="floating bold blur" id="l1">b</p>
                 <p class="floating bold blur" id="l2">o</p>
@@ -84,6 +101,17 @@
                 <p class="floating bold blur" id="l5">h</p>
             </div>
         </section>
+        <section id="vegoons-card">
+            <h2 id='vegoons-card__projects'>Projects.</h2>
+            <div id="vegoons-content" class='flex-wrap' style='justify-content: center; align-items: center;'>
+                <div>
+                    <h3 style='font-family: Sutro; font-size: 34px'>Vegoons</h3>
+                    <p id='subtitle' style='font-family: Karmina; max-width: 11em;'>Streamlined mobile web app for hungry vegans.</p>
+                    <a href="/src/vegoons.html" id='vegoons-card__link'><p style="font-family: Sutro; position: relative; top: 1em; left: 3em">Read more.</p></a>
+                </div>
+                <img id='vegoons-iphone' src='/Assets/Vegoons/Vegoons-iphone.png' alt='Vegoons iPhone prototype'/>
+            </div>
+        </section> 
         <section id="zentella-card">
             <div id="zentella-content" class="hidden">
                 <h2>Projects.</h2>
@@ -92,12 +120,12 @@
                 <img src="/Assets/Zentella/SVG/centella-colored.svg">
                 <p class="chaparral">Organic, playful concept <br>
                     for a beauty brand.</p>
-                <a href="./Zentella.html"><p class="chaparral">Read more.</p></a>
+                <a href="/src/Zentella.html"><p class="chaparral">Read more.</p></a>
             </div>
         </section> 
-        <section id="contact-footer">
-            <p class="cap">Work with me:  <span id="v-inline">|</span>  <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a></p>
-        </section>
+    <section id="contact-footer">
+        <p class="cap">Hire me:  <span id="v-inline">|</span>  <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a></p>
+    </section>
     </main>
 </body>
 </html>

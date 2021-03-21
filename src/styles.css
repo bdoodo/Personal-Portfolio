@@ -11,7 +11,6 @@
     opacity
     ------------
     page specific
-        --coming soon page
         --home
         --zentella project page
     screen configurations
@@ -19,12 +18,13 @@
 
 body, html {
     scroll-snap-type: y proximity;
-    margin: 0.1%;
+    margin: 0;
 }
 
 /*fonts*/
 
 @import url("https://use.typekit.net/ghk0tik.css");
+@import url('https://use.typekit.net/uch0ebh.css'); /*vegoons*/
 
 @counter-style en-dash {
     system: fixed;
@@ -105,6 +105,11 @@ a {
 .light {
     font-weight: 300;
 }
+
+.justify {
+    text-align: justify;
+}
+
 /*nav*/
 
 nav {
@@ -178,7 +183,7 @@ ul .open {
 }
 
 .em-indent {
-    margin-left: 1em;
+    text-indent: 1em;
 }
 
 .en-indent {
@@ -192,10 +197,25 @@ section {
     overflow: hidden;
 }
 
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .space-around {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inline {
+    display: inline;
 }
 
 #index .single-column {
@@ -310,15 +330,6 @@ section {
     80% {transform: translate(100px, 110px) rotate(1.57turn);}
     to {transform: translate(120px, 150px) rotate(1.77turn);}
 }
-/*swup transitions*/
-.transition-fade {
-    opacity: 1;
-    transition: 1s;
-}
-
-html.is-animating .transition-fade {
-    opacity: 0;
-}
 
 /*sizing*/
 .fullscreen {
@@ -329,6 +340,10 @@ html.is-animating .transition-fade {
 
 .golden-ratio {
     padding-top: 61.8%;
+}
+
+.icon {
+    height: 32px;
 }
 
 /*opacity*/
@@ -393,8 +408,6 @@ html.is-animating .transition-fade {
     min-width: 30%;
 }
 
-
-
 #section-2 {
     background-color:  hsl(45, 100%, 99%);
     margin-bottom: 4em;
@@ -405,6 +418,18 @@ html.is-animating .transition-fade {
 
 #content-2 {
     z-index: 5;
+}
+
+#content-2 p {
+    margin: 0;
+}
+
+#content-2 p + p {
+    text-indent: 1em;
+}
+
+#content-2 .small-caps {
+    letter-spacing: 1px;
 }
 
 #contact-footer {
@@ -456,6 +481,42 @@ html.is-animating .transition-fade {
     animation: float5 40s linear both infinite alternate;
 }
 
+#vegoons-card {
+    scroll-snap-align: start;
+    padding: 0.5em;
+    position: relative;
+    opacity: 0;
+}
+
+#vegoons-card__projects {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+#vegoons-content {
+    box-shadow: 0 0 4px gray;
+    padding: 3em 0;
+}
+
+#vegoons-content > div {
+    margin-right: 5em;
+}
+
+@media screen and (max-width: 679px) {
+    #vegoons-content h3, #vegoons-content p {
+        text-align: center;
+        margin: 1em auto;
+    }
+    #vegoons-content > div {
+        margin: 2em 0 3em;
+        width: 100%;
+    }
+    #vegoons-card__projects {
+        margin: 0 auto
+    }
+}
+
 #z-header {
     padding: 5vh 2vw 0;
     width: 100%;
@@ -470,12 +531,13 @@ html.is-animating .transition-fade {
 
 #projects-tag a {
     text-decoration: none;
+    font-family: 'meno-banner'
 }
 
 #zentella-card {
     padding: 1vh 0 0;
-    width: 100%;
     scroll-snap-align: start; 
+    margin: 0 0.5em;
 }
 
 #index #zentella-content {
@@ -483,7 +545,7 @@ html.is-animating .transition-fade {
     max-height: 100vh;
     margin-bottom: 28vh;
     border: 1px solid #707070;
-    box-shadow: 0px 0px 5px #707070;
+    box-shadow: 0px 0px 4px #707070;
     padding: 5vh 2vw 0;
     transition: opacity 2s;
     position: relative;
@@ -582,8 +644,6 @@ html.is-animating .transition-fade {
     justify-content: space-between;
     margin: 2em 0 10em;
 }
-
-
 
 #z-brief > p {
     max-width: 60%;
@@ -729,6 +789,166 @@ html.is-animating .transition-fade {
 
 #zentella-project #contact-footer {
     border-top: 1px solid gray;
+}
+
+/*--vegoons project page*/
+
+#vegoons .small-caps {
+    letter-spacing: 1px;
+}
+
+#vegoons header {
+    margin-top: 7em;
+    box-shadow: 0 3px 3px lightgrey;
+    opacity: 0;
+    animation: fade-in 0.2s ease-out 0.3s forwards, scale-down 0.2s ease-out 0.3s;
+}
+
+#vegoons main {
+    opacity: 0;
+    animation: fade-in 0.3s ease-out 0.6s forwards, slide-up 0.3s ease-out 0.6s;
+}
+
+#vegoons header h1 {
+    margin-top: 2em; 
+    font-size: 48px; 
+    text-align: center; 
+    width: 250px;
+}
+
+#vegoons #subtitle {
+    max-width: 300px; 
+    margin-top: 2em
+}
+
+#vegoons-iphone {
+    max-height: 500px;
+    transform: rotate3d(1, 1, 0, -15deg);
+}
+
+#vegoons *[class*='icon'][class*='inline'] {
+    margin-left: 1em;
+}
+
+#vegoons #fluent {
+    font-weight: bold; 
+    font-family: Segoe UI;
+}
+
+#vegoons #links {
+    position: relative;
+    bottom: 3em;
+    margin-left: 13%;
+    width: fit-content;
+}
+
+#vegoons #github {
+    text-decoration: none;
+}
+
+#vegoons #live-link {
+    margin-left: 2em;
+}
+
+#vegoons hr {
+    width: 100%;
+    background-color: lightgray;
+    border: none;
+    height: 2px;
+}
+
+#vegoons p {
+    font-family: 'Karmina', serif;
+}
+
+#vegoons .smaller p {
+    font-size: 21px
+}
+
+#vegoons h1, #vegoons h2, #vegoons h3 {
+    font-family: 'Sutro', sans-serif
+}
+
+#meal-selector {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 2em;
+}
+
+#meal-selector p {
+    font-family: 'Sutro';
+}
+
+#meal-selector__course {
+    display: flex; 
+    flex-direction: column;
+    margin-top: 26px;
+}
+
+#meal-selector__course p {
+    margin: 0 0 0.5em;
+    transform: scale(0.9, 0.9);
+    color: darkgray;
+}
+
+#vegoons .notes {
+    font-size: 16px;
+}
+
+#vegoons .notes::before {
+    content: '* ';
+}
+
+#vegoons li {
+    font-size: 21px;
+    font-family: 'Karmina';
+    margin-bottom: 0.5em;
+    text-align: justify;
+}
+
+@keyframes slide-up {
+ from {transform: translateY(30px);}
+ to {transform: translateY(0);}
+}
+
+@keyframes scale-down {
+    from {transform: scale(1.05, 1.05);}
+    to {transform: scale(1, 1);}
+}
+
+@keyframes list-selector {
+    from {transform: translateY(0);}
+    25% {transform: translateY(-1.7em);}
+    50% {transform: translateY(-3.4em);}
+    to {transform: translateY(0);}
+}
+
+@media screen and (max-width: 688px) {
+    #vegoons header {
+        margin-top: 0;
+    }
+    #vegoons header h1 {
+        margin: 1em auto 0;
+    }
+    #vegoons #subtitle {
+        text-align: center;
+    }
+    #vegoons #links {
+            position: static;
+            margin: 3em 0 0 13%;
+            padding-bottom: 2em;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    #vegoons #role {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 /*screen configurations*/

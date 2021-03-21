@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCPVF0Y761"></script>
+  <script defer src="/src/index.js" type="text/javascript"></script>
+  <script defer src='/src/vegoons.js' type='text/javascript'></script>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/uch0ebh.css">
+  <title>Web App - Vegoons</title>
+</head>
+<body id='vegoons'>
+  <nav>
+    <img id="nav-icon" src="/Assets/menu.svg">
+    <ul>
+        <li class="nav-item closed"><a href="../index.html"><p>Home</p></a></li>
+        <li class="nav-item closed"><a href="./Zentella.html"><p>Concept - Zentella</p></a></li>
+        <li class="nav-item closed"><a href="./vegoons.html"><p>Mobile Web App - Vegoons</p></a></li>
+    </ul>
+  </nav>
+  <header>
+    <h2 id="projects-tag" style='padding-left: 2vw; margin-top: -1em'><a href="../index.html#vegoons-card">Projects.</a></h2>
+    <div class='flex-wrap' style='justify-content: center'>
+      <div>
+        <h1>Vegoons</h1>
+        <p id='subtitle'>Streamlined mobile web app for hungry vegans.</p>
+      </div>
+      <figure>
+        <img id='vegoons-iphone' src='/Assets/Vegoons/Vegoons-iphone.png' alt='Vegoons iPhone prototype'/>
+        <figcaption style='max-width: 300px'>
+          Top: vector designed by <a href='https://www.freepik.com/vectors/background'>Freepik</a>. <br>
+          Bottom: vector designed by <a href='https://artbaraurora.com/portfolio/sarah-cervantes/'>Sarah Cervantes</a>.
+        </figcaption>
+      </figure>
+    </div>
+    <div id='links'>
+      <a href='https://github.com/bdoodo/Personal-Projects/tree/main/vegan-food-app' id='github'>
+        <img src='/Assets/icons/github.svg' class='icon' alt='GitHub'/>
+      </a>
+      <a href='https://vegoons.netlify.app' id='live-link'>
+        <p style='display: inline;'>Live Site</p>
+      </a>
+    </div>
+  </header>
+  <main>
+    <section id='brief'>
+      <div class='space-between'>
+        <p style='max-width: 25em;'>
+          Vegoons is a web app that narrows down search 
+          parameters for recipes/restaurants and returns
+          relevant results. It started as a practice
+          project for React.Js, and is based on my
+          own process of choosing food.
+          <br>
+          <span  class='notes' style="font-size: 21px; position: relative; top: 0.5em; left: 0.5em">
+            Full dev notes on <a href='https://github.com/bdoodo/Personal-Projects/tree/main/vegan-food-app'>GitHub</a>
+          </span>
+        </p>
+        <div id='role'>
+          <h2>Role</h2>
+          <div style='width: 174px;'>
+            <p style='margin-bottom: 0;'>Development</p>
+            <p class='notes' style='margin-top: 0.2em; margin-left: 0.5em'>Notes</p>
+            <img src='/Assets/icons/react.svg' class="icon" alt='React.js'/>
+            <img src='/Assets/icons/node.svg' class='icon inline' alt='Node.js'/>
+          </div>
+          <div>
+            <p>UX</p>
+            <img src='/Assets/icons/xd.svg' class='icon' alt='Adobe Xd'/>
+            <p class='inline icon' id='fluent'>Fluent UI</p>
+          </div>
+        </div>
+      </div>
+      <hr style='margin: 7em 0'/>
+      <div style='text-align: center'>
+        <p style='margin: 0 0 1em 0; font-size: 34px; text-align: left'>Initial <span class='small-caps'>ux</span> flow:</p>
+        <div style='max-width: 35em; margin: 0 auto'>
+          <img src='/Assets/Vegoons/initial-UX-flow.png' alt='Initial UX flow' style='max-width: 100%'/>
+        </div>
+      </div>
+      <hr style='margin: 7em 0 3em'/>
+    </section>
+    <section id='v1-flow'>
+      <h2>Version 1</h2>
+      <h3>1. Onboarding</h3>
+      <div class='space-between'>
+        <div style='flex: 0.9; margin-bottom: 2em'>
+          <p>
+            On the first page, the app collects three pieces of data
+            to filter results:  It automatically detects location
+            and time (to filter by breakfast/lunch/dinner), and
+            asks the user if he's going out or staying in.
+          </p>
+          <p>
+            <span class='notes'>To lay the foundations of the app, I planned for 
+            three topics upfront: State management, data 
+            fetching, and a <span class='small-caps'>ui</span> library. Respectively, I chose
+            React states/props, Rest <span class='small-caps'>api</span>s from Yelp and 
+            Edamam, and Fluent <span class='small-caps'>ui</span> Northstar. Fluent UI allows
+            me to easily change theme in response to user color preference.</span>
+          </p>
+        </div>
+        <div id='meal-selector'>
+          <p style='margin-right: 0.5em;'>What's for</p>
+          <div id='meal-selector__course'>
+            <p>breakfast</p>
+            <p>lunch</p>
+            <p>dinner</p>
+          </div>
+          <p>?</p>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: center; margin: 5em 0">
+        <img style='height: 48px;' src='/Assets/icons/down-arrow.svg'/>
+      </div>      
+      <h3>2. Categories</h3>
+      <div class="space-between">
+        <div style='max-width: 30em; min-width: 20em; flex: 0.9' id='categories-text'>
+          <p>
+            Following my own preferences of choosing by cuisine,
+            cuisine categories are the main focus of the
+            second page, while search is presented as a
+            secondary option.
+          </p>
+          <p>
+            <span class='notes'>Because the <span class='small-caps'>api</span>s take different parameters, I save
+            cuisines in a separate state from search. This
+            lets me pass cuisines directly in the
+            appropriate parameter for the Edamam <span class='small-caps'>api</span>.</span>
+          </p>
+        </div>
+        <figure style='margin: 1em 0'>
+          <div style='max-width: 500px;'>
+            <img src='/Assets/Vegoons/categories-page.png' style='max-width: 100%;'/>
+          </div>
+          <figcaption style='max-width: 500px;'>
+            Images/Gifs on top are responsive to time of day
+            and the option selected from onboarding.
+            <br><br>
+            Left: Vector by <a href='https://www.freepik.com/vectors/people'>Freepik</a>.
+            Right: Vector by <a href='https://dribbble.com/shots/2603254-Hill-View'>Aswin Biji</a>.
+          </figcaption>
+        </figure>
+      </div>
+      <div style="display: flex; justify-content: center; margin: 5em 0">
+        <img style='height: 48px;' src='/Assets/icons/down-arrow.svg'/>
+      </div>
+      <h3>3. Results</h3>
+      <p class='single-column'>
+        The user-inputs up to this point – along with location,
+        time, & an additional 'vegan' parameter – are passed
+        to the search.
+      </p>
+      <p style='max-width: 20em;'>
+        <span class='notes'>To accommodate for the Cors policy set by the Yelp
+        <span class='small-caps'>api</span>, I set up a serverless <span class='small-caps'>api</span> to fetch
+        Yelp/Edamam <span class='small-caps'>api</span>s, then called this custom <span class='small-caps'>api</span> from
+        the client.</span>
+      </p>
+      <div style='display: flex; flex-wrap: wrap;'>
+        <figure style='flex: 1 1;'>
+          <p style='font-family: Sutro;'>Open now:</p>
+          <img src='/Assets/Vegoons/restaurant-card.png' style='max-height: 250px;'/>
+        </figure>
+        <figure style="flex: 1 1;">
+          <p style='font-family: Sutro;'>Hot in the kitchen:</p>
+          <img src='/Assets/Vegoons/recipe-card.png' style='max-height: 250px;'/>
+        </figure>
+      </div>
+      <hr style='margin: 7em 0 3em'/>
+    </section>
+    <section id='v2' class='smaller'>
+      <h2>The future: Version 2</h2>
+      <h3>Working with imperfect data</h3>
+      <div class='space-between'>
+        <div>
+          <p style='max-width: 23em; margin-bottom: 0;' class='justify'>
+            <i>Problem 1</i>: In 
+            version 1, it became quickly apparent that the data points I was working with were 
+            flawed. For example, in the original version, the 
+            onboarding options of 'going out' and 'staying in' were to 
+            call different Yelp <span class='small-caps'>api</span> endpoints. If the user were going out, 
+            the main endpoint would be called; if he were staying in, 
+            the endpoint returning delivery-offering-restaurants would 
+            be called. As it turned out, the delivery endpoint 
+            filtered out many restaurants whose profiles didn't 
+            explicitly list 'delivery.' However, during the pandemic, 
+            essentially <i>every</i> open restaurant offers delivery, so to filter some out on this basis was unfair. 
+          </p>
+          <p style='max-width: 23em; margin-top: 0' class='justify em-indent'>
+            To adjust for this, I programmed all Yelp searches to call 
+            the main endpoint. Now, 'going out' and 'staying 
+            in' both return the same restaurant results, making 
+            the onboarding page basically redundant.
+          </p>
+        </div>
+        <p style='max-width: 30em;'><i>Solution</i>: Version 2 would remove the onboarding page.</p>
+      </div>
+      <hr style='margin: 2em 0'/>
+      <div class='space-between'>
+        <p class='justify' style='max-width: 23em;'>
+          <i>Problem 2</i>: The 'vegan' tag was also inadequate; 
+          for Yelp results, it can return restaurants which only have one
+          'vegan' item buried in the menu or reviews. Edamam accepts 
+          'vegan' as a specific parameter to filter by; but even
+          it returns non-vegan recipes which offer no vegan substitutes. 
+        </p>
+        <div style='max-width: 30em;'>
+          <p><i>Considered solutions</i>:</p>
+          <ol>
+            <li>For Yelp results, I considered creating pages for items that highlight the mention of 'vegan' in menu items and reviews. However, those aren't available as <span class='small-caps'>api</span> data, and webcrawling for them would be unreliable.</li>
+            <li>Another solution could have been to look for different <span class='small-caps'>api</span>s, but I haven't seen any as robust as either Yelp or Edamam.</li>
+            <li>If I can't add functionality to the app, the best next thing is to be honest with users about what to expect (see next point).</li>
+          </ol>
+        </div>
+      </div>
+      <hr style='margin: 4em 0'/>
+      <h3 style='margin-top: 3em'>Making app functionality more obvious</h3>
+      <div class='space-between'>
+        <p class='justify' style='max-width: 23em;'><i>Problem</i>: After receiving feedback from friends, it was clear that not all of the app's filtering is obvious. For example, the app adds 'vegan' to every <span class='small-caps'>api</span> call, although that is never shown to the user. It is also not obvious that recipes are sorted by course (breakfast, lunch, dinner) according to time of day.</p>
+        <div style='max-width: 30em;'>
+          <p><i>Solutions</i>:</p>
+          <ol>
+            <li>'Vegan' should be shown by the search bar to make it obvious that vegan results are being searched for.</li>
+            <li>Filters should be added by the search bar that say what has been applied – for example, which course applies – and allow the user to change them.</li>
+          </ol>
+        </div>
+      </div>
+      <hr style='margin: 6em 0'/>
+    </section>
+    <section id='summary'>
+      <p class='justify single-column' style='text-align: justify; margin: 0 auto'>
+        I learned a lot from this project, from making my first React web app to learning to call <span class='small-caps'>api</span>s and 
+        make serverless ones. This was also my first time working with a <span class='small-caps'>ui</span> library, and I was able to see
+        how developer-friendly and efficient a <span class='small-caps'>css</span>-in-<span class='small-caps'>js</span> library can be.
+      </p>
+      <p class='single-column' style='margin: 0 auto; text-align: justify; text-indent: 1em;'>
+        There's still more room for improvement:
+        For example, to make use of Fluent <span class='small-caps'>ui</span>'s philosophy, I would add animations that suggest functionality
+        to the user. I could also edit the app manifest to make it a <span class='small-caps'>pwa</span>. But after three weeks of hard work,
+        I'm happy how this turned out, and am excited about the prospect of working with <span class='small-caps'>pwa</span>s in the future.
+      </p>
+    </section>
+  </main>
+  <section id="contact-footer" style='margin-top: 10em; box-shadow: 0 0 3px darkgray;'>
+    <p class="cap">Hire me:  <span id="v-inline">|</span>  <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a></p>
+  </section>
+</body>
+</html>
