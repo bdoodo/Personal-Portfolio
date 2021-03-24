@@ -421,10 +421,12 @@ section {
 
 #content-2 {
     z-index: 5;
+    column-gap: 2em;
 }
 
 #content-2 p {
     margin: 0;
+    text-align: justify;
 }
 
 #content-2 p + p {
