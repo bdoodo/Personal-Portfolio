@@ -89,7 +89,6 @@ hr {
     -moz-font-feature-settings: "smcp";
     -webkit-font-feature-settings: "smcp";
     font-feature-settings: "smcp";
-    letter-spacing: 4px;
 }
 
 a {
@@ -244,10 +243,6 @@ section {
 
 /*animations*/
 
-.fade-slide-right {
-    animation: fade-in 1.5s forwards, slide-right 1.5s;
-}
-
 .fade-in {
     animation: fade-in 3s forwards;
 }
@@ -266,11 +261,6 @@ section {
         height: fit-content;
         overflow-y: scroll;
     }
-}
-
-@keyframes slide-right {
-    from {transform: translateX(-5em);}
-    to {transform: translateX(0);}
 }
 
 @keyframes bounce-down {
@@ -391,6 +381,7 @@ section {
     font-size: 26px;
     line-height: 13px;
     margin-left: 1em;
+    letter-spacing: 6px;
 }
 
 #anim-2 {

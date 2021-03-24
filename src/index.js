@@ -10,10 +10,16 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
 
     let animSequence = [one, two, three, four];
 
+    //fade-in 1.5s forwards, slide-right 1.5s
+    const fadeSlideRight = [
+        {opacity: 0, transform: 'translateX(-5em)'},
+        {opacity: 1, transform: 'translateX(0)'}
+    ]
+
     async function startAnimations() {
         await timer(1500)
         for (let i=0; i<animSequence.length; i++){
-            animSequence[i].classList.add('fade-slide-right');
+            animSequence[i].animate(fadeSlideRight, {duration: 1500, fill: 'forwards', easing: 'ease-out'})
             await timer(300);
         }
 
