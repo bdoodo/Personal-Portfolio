@@ -1017,9 +1017,6 @@ section {
     #b-sig {
         margin-bottom: 4em;
     }
-    .double-column {
-        column-count: 1;
-    }
     #anim-2 {
         line-height: normal;
     }
@@ -1035,7 +1032,9 @@ section {
     #b-sig {
         margin: 0 10% 10%;
     }
-
+    .double-column {
+        column-count: 1;
+    }
     nav ul {
         width: 100vw;
         padding-bottom: 0.5em;
