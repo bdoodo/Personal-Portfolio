@@ -19,7 +19,10 @@
         --vegoons
     screen configurations
 */
-
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
 body, html {
     scroll-snap-type: y proximity;
     margin: 0;
@@ -45,35 +48,35 @@ h1 {
     font-family: minion-pro, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 34px;
+    font-size: 3.4rem;
 }
 
 h2 {
     font-family: meno-banner, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 34px;
+    font-size: 3.4rem;
 }
 
 p {
     font-family: minion-pro, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 26px;
+    font-size: 2.6rem;
 }
 
 .cap {
     font-family: minion-pro-caption, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 34;
+    font-size: 3.4rem;
 }
 
 figcaption {
     font-family: minion-pro-caption, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-top: 2em;
 }
 
@@ -89,11 +92,15 @@ hr {
     -moz-font-feature-settings: "smcp";
     -webkit-font-feature-settings: "smcp";
     font-feature-settings: "smcp";
+    letter-spacing: 0.2rem;
 }
 
 a {
     text-decoration: underline;
     color: black;
+}
+a:hover p {
+    font-weight: bold;
 }
 
 .bold {
@@ -203,7 +210,6 @@ section {
     padding: 5vh 15% 0;
     box-sizing: border-box;
     display: block;
-    overflow: hidden;
 }
 
 .flex-wrap {
@@ -229,7 +235,12 @@ section {
 
 #index .single-column {
     min-width: 20em;
-    max-width: 43%;
+    max-width: 40em;
+}
+@media screen and (max-width: 1250px) {
+    #index .single-column {
+        max-width: 60em;
+    }
 }
 
 .single-column {
@@ -264,8 +275,8 @@ section {
 }
 
 @keyframes bounce-down {
-    from {transform: translateY(-120%);}  
-    60% {transform: translateY(15%);}
+    from {transform: translateY(-50%);}  
+    60% {transform: translateY(10%);}
     to {transform: translateY(0);}
 }
 
@@ -280,8 +291,8 @@ section {
 }
 
 @keyframes bounce-up {
-    from {transform: translateY(100vh);}
-    60% {transform: translateY(-15%);}
+    from {transform: translateY(30%);}
+    60% {transform: translateY(-10%);}
     to {transform: translateY(0);}
 }
 
@@ -378,21 +389,19 @@ section {
     font-weight: 400;
     font-style: normal;
     color: #F53B3B;
-    font-size: 26px;
+    font-size: 2.6rem;
     line-height: 13px;
     margin-left: 1em;
     letter-spacing: 6px;
 }
-
 #anim-2 {
     font-family: minion-pro-subhead, serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 26px;
+    font-size: 2.6rem;
     color: #3A3A3A;
     margin-left: 1em;
 }
-
 #anim-1, #anim-2, #anim-3, #anim-4, #anim-5 {
     opacity: 0;
 }
@@ -400,47 +409,41 @@ section {
 #section-1 {
     background-color: hsl(45, 100%, 98%);
     min-height: 85vh;
+    padding-bottom: 1px;
 }
-
 #content-1 {
     padding: 0;
     margin: 15vh 0;
 }
-
 #b-sig {
     min-width: 30%;
 }
 
 #section-2 {
     background-color:  hsl(45, 100%, 99%);
-    margin-bottom: 4em;
+    padding-bottom: 4em;
     padding-right: 17%;
     min-height: 27em;
     position: relative;
+    overflow: hidden;
 }
-
 #content-2 {
     z-index: 5;
-    column-gap: 2em;
+    column-gap: 4em;
 }
-
 #content-2 p {
     margin: 0;
     text-align: justify;
 }
-
 #content-2 p + p {
     text-indent: 1em;
-}
-
-#content-2 .small-caps {
-    letter-spacing: 1px;
 }
 
 #contact-footer {
     text-align: center;
     padding-bottom: 50px;
     scroll-snap-align: end;
+    margin-top: 10em;
 }
 
 .floating {
@@ -450,35 +453,30 @@ section {
     user-select: none;
     z-index: 0;
 }
-
 #l1 {
     bottom: -20%;
     left: 25%;
     transform: rotate(0.12turn);
     animation: float1 50s linear 1.5s both infinite alternate;
 }
-
 #l2 {
     bottom: 30%;
     left: 33%;
     transform: rotate(0.52turn);
     animation: float2 50s linear 1s both infinite alternate;
 }
-
 #l3 {
     bottom: 50%;
     right: 50%;
     transform: rotate(0.43turn);
     animation: float3 50s linear both infinite alternate;
 }
-
 #l4 {
     right: 40%;
     bottom: -10%;
     transform: rotate(0.78turn);
     animation: float4 40s linear both infinite alternate;
 }
-
 #l5 {
     bottom: 35%;
     right: 25%;
@@ -486,28 +484,42 @@ section {
     animation: float5 40s linear both infinite alternate;
 }
 
+#case-studies {
+    padding: 0;
+    position: relative;
+    margin-top: 5em;
+}
+#sticky-header {
+    position: absolute;
+    height: 657px;
+    margin-top: 2.3em;
+    opacity: 0;
+}
+#case-studies h2 {
+    position: sticky;
+    top: 1.5em;
+    margin-left: 1em
+}
+
 #vegoons-card {
     scroll-snap-align: start;
-    padding: 0.5em;
+    padding: 0.1em 0.5em 0;
     position: relative;
     opacity: 0;
 }
-
 #vegoons-card__projects {
     position: absolute;
     top: 1em;
     left: 1em;
 }
-
 #vegoons-content {
     box-shadow: 0 0 4px gray;
     padding: 3em 0;
+    margin-top: 3px;
 }
-
 #vegoons-content > div {
     margin-right: 5em;
 }
-
 @media screen and (max-width: 679px) {
     #vegoons-content h3, #vegoons-content p {
         text-align: center;
@@ -523,95 +535,151 @@ section {
 }
 
 .z-box-bounce-up {
-    animation: bounce-up 1.3s ease-out;
+    animation: bounce-up 0.8s ease-out;
 }
-
-
-
-#projects-tag a {
-    text-decoration: none;
-    font-family: 'meno-banner';
-}
-
 #zentella-card {
-    padding: 1vh 0 0;
+    padding: 0.1em 0 0;
     scroll-snap-align: start; 
     margin: 0 0.5em;
 }
-
 #index #zentella-content {
     min-height: 600px; 
     max-height: 100vh;
-    margin-bottom: 28vh;
-    border: 1px solid #707070;
-    box-shadow: 0px 0px 4px #707070;
+    box-shadow: 0px 0px 4px gray;
     padding: 5vh 2vw 0;
     transition: opacity 2s;
     position: relative;
+    margin-bottom: 3px;
+    overflow: hidden;
 }
-
 .ten-mincho {
     font-family: 'ten-mincho';
     font-weight: 400;
 }
-
 #zentella-header {
-    font-size: 42px;
+    font-size: 4.2rem;
     width: fit-content;
-    margin: 0 auto;
+    margin: 4em auto 0;
     background-color:hsla(0, 0%, 100%, 80%);
     border-radius: 10%;
 }
-
 #zentella-content img, #z-header img {
     width: 150px;
     z-index: -10;
 }
-
 #zentella-content img:nth-of-type(1), #z-header img:nth-of-type(1) {
     position: absolute;
     left: 20%;
     top: 35%;
     transform: rotate(-0.05turn);
 }
-
 #zentella-content img:nth-of-type(2), #z-header img:nth-of-type(2) {
     position: absolute;
     right: 20%;
     top: 30%;
     transform: rotate(0.05turn);
 }
-
 .chaparral {
     font-family: chaparral-pro;
 }
-
 .ten-mincho {
     font-family: ten-mincho;
 }
-
 #zentella-content p, #z-header p {
     width:fit-content;
     margin: 0 auto;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 2em;
     background-color:hsla(0, 0%, 100%, 80%);
     border-radius: 10%;
 }
-
 #zentella-content a {
     position: absolute;
     bottom: 15%;
     right: 33%;
 }
 
+#misc-projects {
+    padding: 0 0.5em;
+    --box-length: 325px;
+}
+#misc-projects > h2 {
+    margin: 2em 0 1em 1em;
+}
+#misc-projects > div {
+    padding: 0 5em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box {
+    height: var(--box-length);
+    width: var(--box-length);
+    box-shadow: 0 0 4px gray;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3px;
+}
+.box:hover {
+    box-shadow: 0 0 8px lightgrey;
+}
+.box--disabled {
+    background-color: #f7f7f7;
+}
+.box--disabled:hover {
+    box-shadow: 0 0 4px gray;
+}
+.box__icons {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-items: center;
+}
+.box__icons > * {
+    margin: 0 1.5em;
+}
+.box__summary {
+    position: absolute;
+    width: var(--box-length);
+    height: var(--box-length);
+    background-color: hsla(100, 100%, 100%, 90%);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+.box__summary p {
+    font-size: 2.1rem;
+    margin: 0;
+}
+.box__summary p + p {
+    margin-top: 1em;
+}
+.box__summary:hover, .box__summary:focus-within {
+    opacity: 1;
+}
+@media screen and (max-width: 1220px) {
+    .box--disabled {display: none}
+}
+
 /*--zentella Project Page*/
+
+#projects-tag a {
+    text-decoration: none;
+    font-family: 'meno-banner';
+}
 
 #z-card-unveil {
     background-color: white;
     border: 1px solid #707070;
     box-shadow: 0px 0px 5px #707070;
-    animation: unveil-down 1s forwards 0.9s;
+    animation: unveil-down 1s forwards 0.6s;
     position: fixed;
     bottom:0;
     height: 100%;
@@ -620,7 +688,7 @@ section {
 }
 
 #z-header {
-    animation: bounce-down 1.2s ease-out;
+    animation: bounce-down 0.8s ease-out;
     z-index:2;
     background-color: white;
     padding: 5vh 2vw 0;
@@ -632,7 +700,7 @@ section {
 
 #zentella-project h3 {
     font-family: ten-mincho;
-    font-size: 42px;
+    font-size: 4.2rem;
     font-weight:400;
     margin-top: 0;
     margin-bottom: 0;
@@ -747,7 +815,7 @@ section {
 }
 
 #z-typography .sample-text {
-    font-size: 42px;
+    font-size: 4.2rem;
 }
 
 #z-screenshots {
@@ -757,7 +825,7 @@ section {
     display: block;
     margin-left: 70%;
     margin-bottom: 1em;
-    font-size: 21px;
+    font-size: 2.1rem;
 }
 
 #z-screenshots div:first-of-type {
@@ -803,10 +871,6 @@ section {
 
 /*--vegoons project page*/
 
-#vegoons .small-caps {
-    letter-spacing: 1px;
-}
-
 #vegoons #projects-tag {
     padding-left: 2vw; 
 }
@@ -824,7 +888,7 @@ section {
 
 #vegoons header h1 {
     margin-top: 2em; 
-    font-size: 48px; 
+    font-size: 4.8rem; 
     text-align: center; 
     width: 250px;
 }
@@ -875,7 +939,7 @@ section {
 }
 
 #vegoons .smaller p {
-    font-size: 21px
+    font-size: 2.1rem;
 }
 
 #vegoons h1, #vegoons h2, #vegoons h3 {
@@ -907,7 +971,7 @@ section {
 }
 
 #vegoons .notes {
-    font-size: 16px;
+    font-size: 1.6rem;
 }
 
 #vegoons .notes::before {
@@ -915,7 +979,7 @@ section {
 }
 
 #vegoons #v2 li {
-    font-size: 21px;
+    font-size: 2.1rem;
     font-family: 'Karmina';
     margin-bottom: 0.5em;
     text-align: justify;
@@ -971,6 +1035,16 @@ section {
         position: relative;
         right: 40px;
     }
+    #vegoons-iphone {
+        max-height: 350px;
+    }
+    .box {
+        width: 100%;
+    }
+    #sticky-header {
+        height: fit-content;
+        position: static;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -1008,11 +1082,19 @@ section {
         width: 100%;
         height: 56vw;
     }
-     section {
-        padding: 5vh 1em 0;
+    section {
+        padding: 5vh 2em 0;
+    }
+    #misc-projects > div {
+        padding: 0;
+    }
+    html {
+        font-size: 55%;
     }
 }
-
+@media screen and (max-width: 680px) {
+    section{overflow: hidden}
+}
 @media screen and (max-width: 790px) {
     #b-sig {
         margin-bottom: 4em;
@@ -1023,8 +1105,12 @@ section {
     li[class='nav-item open'] {
         right: 0;
     }
-    body, html {
-        scroll-snap-type: none;
+    #case-studies h2 {
+        top: 0;
+        margin-bottom: 1em;
+    }
+    #sticky-header {
+        margin-top: 0;
     }
 }
 
@@ -1049,5 +1135,8 @@ section {
     nav ul[class~="open"] {
         background-color: white;
         transition: 0.5s ease-out;
+    }
+    body, html {
+        scroll-snap-type: none;
     }
 }

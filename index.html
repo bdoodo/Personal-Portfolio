@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Elegant digital design and website development for ethical brands. SoCal-based.">
+    <meta name="Description" content="Front-end developer focused on meaningful designs. SoCal-based.">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCPVF0Y761"></script>
     <script>
@@ -13,7 +13,6 @@
 
         gtag('config', 'G-YCPVF0Y761');
     </script>
-    <!--lottie player-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script defer src="/src/index.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/src/styles.css">
@@ -33,24 +32,24 @@
 </head>
 <body>
     <nav>
-        <img id="nav-icon" src="/Assets/menu.svg">
+        <img id="nav-icon" src="/Assets/menu.svg" tabindex=0 aria-label="navigation menu">
         <ul>
-            <li class="nav-item closed"><a href="/index.html"><p>Home</p></a></li>
-            <li class="nav-item closed"><a href="/src/Zentella.html"><p>Concept - Zentella</p></a></li>
-            <li class="nav-item closed"><a href="/src/vegoons.html"><p>Mobile Web App - Vegoons</p></a></li>
+            <li class="nav-item closed"><a href="/index.html#"><p>Home</p></a></li>
+            <li class="nav-item closed"><a href="/index.html#case-studies"><p>Case Studies</p></a></li>
+            <li class="nav-item closed"><a href="/index.html#misc-projects"><p>Misc. Projects</p></a></li>
         </ul>
     </nav>
     <main id="index">
         <section id="section-1">
             <header>
                 <h1 id="anim-1">BRIAN H DO</h1>
-                <hr noshade="" id="anim-3">
+                <hr noshade id="anim-3">
                 <h2 id="anim-2"><span style='letter-spacing: 2px;'>U</span><span class='small-caps' style='letter-spacing: 1px;'>x</span>-Focused Front-End Web Developer</h2>
             </header>
             <div id="content-1">
                 <div class="space-around">
                     <div id="b-sig">
-                        <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_4e9rlhzf.json" background="transparent" speed="1" style="width:300px;height:300px;" autoplay/>
+                        <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_jzwie0at.json" background="transparent" speed="1" style="width:300px;height:300px;" autoplay/>
                     </div>
                     <div class="single-column" id="anim-4">
                         <p>
@@ -96,31 +95,59 @@
                 <p class="floating bold blur" id="l5">h</p>
             </div>
         </section>
-        <section id="vegoons-card">
-            <h2 id='vegoons-card__projects'>Projects.</h2>
-            <div id="vegoons-content" class='flex-wrap' style='justify-content: center; align-items: center;'>
-                <div>
-                    <h3 style='font-family: Sutro; font-size: 34px'>Vegoons</h3>
-                    <p id='subtitle' style='font-family: Karmina; max-width: 11em;'>Streamlined mobile web app for hungry vegans.</p>
-                    <a href="/src/vegoons.html" id='vegoons-card__link'><p style="font-family: Sutro; position: relative; top: 1em; left: 3em">Read more.</p></a>
+        <section id='case-studies'>
+            <div id='sticky-header'>
+                <h2>Case Studies.</h2>
+            </div>
+            <div id="vegoons-card">
+                <div id="vegoons-content" class='flex-wrap' style='justify-content: center; align-items: center;'>
+                    <div>
+                        <h3 style='font-family: Sutro; font-size: 34px'>Vegoons</h3>
+                        <p id='subtitle' style='font-family: Karmina; max-width: 11em;'>Streamlined mobile web app for hungry vegans.</p>
+                        <a href="/src/vegoons.html" id='vegoons-card__link'><p style="font-family: Sutro; position: relative; top: 1em; left: 3em">Read more.</p></a>
+                    </div>
+                    <img id='vegoons-iphone' src='/Assets/Vegoons/Vegoons-iphone.png' alt='Vegoons iPhone prototype'/>
                 </div>
-                <img id='vegoons-iphone' src='/Assets/Vegoons/Vegoons-iphone.png' alt='Vegoons iPhone prototype'/>
+            </div> 
+            <div id="zentella-card">
+                <div id="zentella-content" class="hidden">
+                    <h3 id="zentella-header" class="ten-mincho">Zentella</h3>
+                    <img id="" src="/Assets/Zentella/SVG/pig-colored.svg">
+                    <img src="/Assets/Zentella/SVG/centella-colored.svg">
+                    <p class="chaparral">Organic, playful concept <br>
+                        for a beauty brand.</p>
+                    <a href="/src/Zentella.html"><p class="chaparral">Read more.</p></a>
+                </div>
+            </div> 
+        </section>
+        <section id='misc-projects'>
+            <h2>Misc. Projects.</h2>
+            <div>
+                <div class='box box--disabled'></div>
+                <div class='box'>
+                    <img src='Assets/images/Polygons.svg' style='height: 200px'/>
+                    <img src='Assets/images/polygon-logo.svg' style='height: 30px'/>
+                    <div class='box__icons'>
+                        <img class='icon' src='Assets/icons/vue.svg'/>
+                        <img class='icon' src='Assets/icons/material.svg'/>
+                    </div>
+                    <div class='box__summary' tabindex='0'>
+                        <p>Clean, modular code for an <i>accessible</i>, <i>responsive</i>, and <i>performant</i> landing page.</p>
+                        <p>Made with Vue and Material <span class='small-caps'>ui</span> as a mash-up between DuckDuckGo and Polygon.</p>
+                        <div class='box__icons'>
+                            <a href='https://github.com/bdoodo/Personal-Projects/tree/main/polygon-redesign' target='blank'>
+                                <img class='icon' src='Assets/icons/github.svg'>
+                            </a>
+                            <a href='https://polyduck.netlify.app' target='blank'><p>Link</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class='box box--disabled'></div>
             </div>
-        </section> 
-        <section id="zentella-card">
-            <div id="zentella-content" class="hidden">
-                <h2>Projects.</h2>
-                <h3 id="zentella-header" class="ten-mincho">Zentella</h3>
-                <img id="" src="/Assets/Zentella/SVG/pig-colored.svg">
-                <img src="/Assets/Zentella/SVG/centella-colored.svg">
-                <p class="chaparral">Organic, playful concept <br>
-                    for a beauty brand.</p>
-                <a href="/src/Zentella.html"><p class="chaparral">Read more.</p></a>
-            </div>
-        </section> 
-    <section id="contact-footer">
-        <p class="cap">Hire me:  <span id="v-inline">|</span>  <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a></p>
-    </section>
+        </section>
+        <section id="contact-footer">
+            <p class="cap">Chat with me:  <span id="v-inline">|</span>  <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a></p>
+        </section>
     </main>
 </body>
 </html>

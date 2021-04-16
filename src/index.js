@@ -10,7 +10,6 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
 
     let animSequence = [one, two, three, four];
 
-    //fade-in 1.5s forwards, slide-right 1.5s
     const fadeSlideRight = [
         {opacity: 0, transform: 'translateX(-5em)'},
         {opacity: 1, transform: 'translateX(0)'}
@@ -18,7 +17,7 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
 
     async function startAnimations() {
         await timer(1500)
-        for (let i=0; i<animSequence.length; i++){
+        for (let i = 0; i < animSequence.length; i++){
             animSequence[i].animate(fadeSlideRight, {duration: 1500, fill: 'forwards', easing: 'ease-out'})
             await timer(300);
         }
@@ -70,6 +69,7 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
         } 
 
         const vBox = document.querySelector('#vegoons-card')
+        const caseStudiesSticky = document.querySelector('#sticky-header')
 
         if (!vAnimated && vBox.getBoundingClientRect().top <= clearance) {
             vBox.animate(
@@ -80,6 +80,11 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
                     easing: 'ease-out'
                 }
             )
+            caseStudiesSticky.animate([
+                {transform: 'translateY(3em)'},
+                {transform: 'translateY(0)'}
+            ], {duration: 250, fill: 'forwards', easing: 'ease-out'})
+            caseStudiesSticky.animate(fadeIn, {duration: 250, fill: 'forwards', easing: 'ease-out'})
             vAnimated = true
         }
     }
@@ -90,6 +95,9 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
 let mql = window.matchMedia('(max-width: 1050px)')
 const navIcon = document.querySelector("#nav-icon");
 navIcon.addEventListener('click', openMenu);
+navIcon.addEventListener('keydown', e => {
+    if (e.keyCode === 13) openMenu()
+})
 let open = false
 
 //--animations
