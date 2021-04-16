@@ -422,7 +422,6 @@ section {
 #section-2 {
     background-color:  hsl(45, 100%, 99%);
     padding-bottom: 4em;
-    padding-right: 17%;
     min-height: 27em;
     position: relative;
     overflow: hidden;
@@ -491,21 +490,22 @@ section {
 }
 #sticky-header {
     position: absolute;
-    height: 657px;
+    height: 667px;
     margin-top: 2.3em;
     opacity: 0;
 }
 #case-studies h2 {
     position: sticky;
     top: 1.5em;
-    margin-left: 1em
+    margin-left: 2rem
 }
 
 #vegoons-card {
     scroll-snap-align: start;
-    padding: 0.1em 0.5em 0;
+    padding: 0.2em 0.5em 0;
     position: relative;
     opacity: 0;
+    margin-bottom: 0.5em;
 }
 #vegoons-card__projects {
     position: absolute;
@@ -538,7 +538,7 @@ section {
     animation: bounce-up 0.8s ease-out;
 }
 #zentella-card {
-    padding: 0.1em 0 0;
+    padding: 0.5em 0 0;
     scroll-snap-align: start; 
     margin: 0 0.5em;
 }
@@ -604,7 +604,7 @@ section {
     --box-length: 325px;
 }
 #misc-projects > h2 {
-    margin: 2em 0 1em 1em;
+    margin: 2em 0 2rem 1.5rem;
 }
 #misc-projects > div {
     padding: 0 5em;
@@ -897,7 +897,12 @@ section {
     max-width: 300px; 
     margin-top: 2em
 }
-
+#vegoons .small-caps {
+     letter-spacing: 0.3rem;
+ }
+#vegoons .notes .small-caps {
+    letter-spacing: 0.2rem;
+}
 #vegoons-iphone {
     max-height: 500px;
     transform: rotate3d(1, 1, 0, -15deg);
@@ -941,17 +946,23 @@ section {
 #vegoons .smaller p {
     font-size: 2.1rem;
 }
-
+#vegoons h3 {
+    font-size: 2.6rem;
+}
 #vegoons h1, #vegoons h2, #vegoons h3 {
     font-family: 'Sutro', sans-serif
 }
 
+#vegoons #v1-flow .text {
+    flex: 1; 
+    margin: 0 4em 2em 0
+}
 #meal-selector {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: nowrap;
-    margin-top: 2em;
+    margin-top: 6em;
 }
 
 #meal-selector p {
@@ -977,7 +988,12 @@ section {
 #vegoons .notes::before {
     content: '* ';
 }
-
+#vegoons .list {
+    max-width: 47em;
+}
+#vegoons ol {
+    padding-inline-start: 2em;
+}
 #vegoons #v2 li {
     font-size: 2.1rem;
     font-family: 'Karmina';
@@ -1002,6 +1018,15 @@ section {
     to {transform: translateY(0);}
 }
 
+@media screen and (max-width: 500px) {
+    #vegoons #v1-flow .text {
+        flex: 1; 
+        margin: 0 0 2em 0
+    }
+    #vegoons figure {
+        margin: 0;
+    }
+}
 @media screen and (max-width: 688px) {
     #vegoons header {
         margin-top: 0;
@@ -1053,9 +1078,6 @@ section {
     }
     #content-1 {
         margin-top: 5em;
-    }
-    #section-2 {
-        padding-right: 1em;
     }
     #z-brief > p {
         max-width: 30em;

@@ -68,7 +68,7 @@
             <img src='/Assets/icons/node.svg' class='icon inline' alt='Node.js'/>
           </div>
           <div>
-            <p>UX</p>
+            <p><span style='letter-spacing: 2px;'>U</span><span class='small-caps'>x</span></p>
             <img src='/Assets/icons/xd.svg' class='icon' alt='Adobe Xd'/>
             <p class='inline icon' id='fluent'>Fluent UI</p>
           </div>
@@ -87,7 +87,7 @@
       <h2>Version 1</h2>
       <h3>1. Onboarding</h3>
       <div class='space-between'>
-        <div style='flex: 0.9; margin-bottom: 2em'>
+        <div class='text'>
           <p>
             On the first page, the app collects three pieces of data
             to filter results:  It automatically detects location
@@ -118,7 +118,7 @@
       </div>      
       <h3>2. Categories</h3>
       <div class="space-between">
-        <div style='max-width: 30em; min-width: 20em; flex: 0.9' id='categories-text'>
+        <div style='max-width: 60em; min-width: 40em; flex: 1; margin-right: 2em;' id='categories-text'>
           <p>
             Following my own preferences of choosing by cuisine,
             cuisine categories are the main focus of the
@@ -156,8 +156,8 @@
       </p>
       <p style='max-width: 20em;'>
         <span class='notes'>To accommodate for the Cors policy set by the Yelp
-        <span class='small-caps'>api</span>, I set up a serverless <span class='small-caps'>api</span> to fetch
-        Yelp/Edamam <span class='small-caps'>api</span>s, then called this custom <span class='small-caps'>api</span> from
+        <span class='small-caps'>api</span>, I set up a serverless proxy <span class='small-caps'>api</span> to fetch
+        Yelp/Edamam <span class='small-caps'>api</span>s, then called this proxy from
         the client.</span>
       </p>
       <div style='display: flex; flex-wrap: wrap;'>
@@ -177,7 +177,7 @@
       <hr style='margin: 7em 0 3em'/>
     </section>
     <section id='v2' class='smaller'>
-      <h2>The future: Version 2</h2>
+      <h2>The Future: Version 2</h2>
       <h3>Working with imperfect data</h3>
       <div class='space-between'>
         <div>
@@ -212,7 +212,7 @@
           'vegan' as a specific parameter to filter by; but even
           it returns non-vegan recipes which offer no vegan substitutes. 
         </p>
-        <div style='max-width: 30em;'>
+        <div class='list'>
           <p><i>Considered solutions</i>:</p>
           <ol>
             <li>For Yelp results, I considered creating pages for items that highlight the mention of 'vegan' in menu items and reviews. However, those aren't available as <span class='small-caps'>api</span> data, and webcrawling for them would be unreliable.</li>
@@ -225,7 +225,7 @@
       <h3 style='margin-top: 3em'>Making app functionality more obvious</h3>
       <div class='space-between'>
         <p class='justify' style='max-width: 23em;'><i>Problem</i>: After receiving feedback from friends, it was clear that not all of the app's filtering is obvious. For example, the app adds 'vegan' to every <span class='small-caps'>api</span> call, although that is never shown to the user. It is also not obvious that recipes are sorted by course (breakfast, lunch, dinner) according to time of day.</p>
-        <div style='max-width: 30em;'>
+        <div class='list'>
           <p><i>Solutions</i>:</p>
           <ol>
             <li>'Vegan' should be shown by the search bar to make it obvious that vegan results are being searched for.</li>
