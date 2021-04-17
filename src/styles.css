@@ -880,6 +880,10 @@ section {
     opacity: 0;
     animation: fade-in 0.2s ease-out 0.3s forwards, scale-down 0.2s ease-out 0.3s;
 }
+#vegoons header figure div {
+    display: flex;
+    width: 100%;
+}
 
 #vegoons main {
     opacity: 0;
@@ -906,6 +910,9 @@ section {
 #vegoons-iphone {
     max-height: 500px;
     transform: rotate3d(1, 1, 0, -15deg);
+}
+#vegoons #vegoons-iphone {
+    margin: 0 auto;
 }
 
 #vegoons *[class*='icon'][class*='inline'] {
@@ -972,7 +979,7 @@ section {
 #meal-selector__course {
     display: flex; 
     flex-direction: column;
-    margin-top: 26px;
+    margin-top: 2.7em;
 }
 
 #meal-selector__course p {

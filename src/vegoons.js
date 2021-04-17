@@ -6,8 +6,8 @@ let iterations = 1
 
 //meal selector animation
 const selectMeal = () => {
-  const inc = 42 * iterations
-  const slideUp = [{transform: `translateY(-${inc}px)`}]
+  const inc = 4.2 * iterations
+  const slideUp = [{transform: `translateY(-${inc}em)`}]
 
   //slide animation
   mealSelectorCourse.animate(slideUp, {
