@@ -99,7 +99,7 @@ a {
     text-decoration: underline;
     color: black;
 }
-a:hover p {
+a:hover p, a:hover {
     font-weight: bold;
 }
 
@@ -653,6 +653,7 @@ section {
     align-items: center;
     flex-direction: column;
     opacity: 0;
+    transition: 0.2s ease-out;
 }
 .box__summary p {
     font-size: 2.1rem;
