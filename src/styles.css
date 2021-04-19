@@ -442,7 +442,16 @@ section {
     text-align: center;
     padding-bottom: 50px;
     scroll-snap-align: end;
-    margin-top: 10em;
+    padding-top: 150px;
+    margin-top: 5em;
+    position: relative;
+}
+#contact-footer img {
+    height: 200px;
+    transform: scaleX(-1);
+    position: absolute;
+    left: 0;
+    bottom: 100px;
 }
 
 .floating {
@@ -1120,6 +1129,10 @@ section {
     }
     html {
         font-size: 55%;
+    }
+    #contact-footer img {
+        height: 150px;
+        bottom: 145px;
     }
 }
 @media screen and (max-width: 680px) {
