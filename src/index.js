@@ -27,7 +27,7 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
     //fade-in on home
 
     window.addEventListener('DOMContentLoaded', () => {
-        window.addEventListener('scroll', scrollAnimations)
+        window.addEventListener('scroll', scrollAnimations, {passive: true})
     })
 
     //add scrolling listener
