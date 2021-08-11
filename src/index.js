@@ -63,12 +63,12 @@ if (window.matchMedia('(min-width: 400px)').matches) {
         const lazyVideos = Array.from(document.querySelectorAll('video.lazy'))
 
         const lazyVideoObserver = new IntersectionObserver((entries, _observer) => {
-            entries.forEach(video => {
+            entries.forEach(async video => {
                 if (video.isIntersecting) {
                     for (const source in video.target.children) {
                         const videoSource = video.target.children[source];
                         if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                            videoSource.src = videoSource.dataset.src;
+                            videoSource.src = 'https://brianhdo-assets.s3.us-west-2.amazonaws.com/' + videoSource.dataset.src;
                         }
                     }
 
