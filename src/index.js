@@ -1,4 +1,16 @@
-    const timer = ms => new Promise(res => setTimeout(res, ms));
+const timer = ms => new Promise(res => setTimeout(res, ms));
+
+//--animations
+
+const fadeIn = [
+    { opacity: 0 },
+    { opacity: 1 }
+]
+const slideDown = [
+    { transform: 'translateY(-3em)' },
+    { transform: 'translateY(0)' }
+]
+
 //home only
 if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
 
@@ -11,83 +23,66 @@ if (window.location.pathname == '/' || window.location.pathname == '/index.html'
     let animSequence = [one, two, three, four];
 
     const fadeSlideRight = [
-        {opacity: 0, transform: 'translateX(-5em)'},
-        {opacity: 1, transform: 'translateX(0)'}
+        { opacity: 0, transform: 'translateX(-5em)' },
+        { opacity: 1, transform: 'translateX(0)' }
     ]
 
-    async function startAnimations() {
-        await timer(1500)
-        for (let i = 0; i < animSequence.length; i++){
-            animSequence[i].animate(fadeSlideRight, {duration: 1500, fill: 'forwards', easing: 'ease-out'})
-            await timer(300);
-        }
-
-        five.classList.add('fade-in');
-    }
-    //fade-in on home
-
-    window.addEventListener('DOMContentLoaded', () => {
-        window.addEventListener('scroll', scrollAnimations, {passive: true})
-    })
-
-    //add scrolling listener
-
-    startAnimations();
-
-    let zAnimated = false
-    let vAnimated = false
-
-    function scrollAnimations() {
-        const fadeElements = document.querySelectorAll('#content-2');
-        
-
-        fadeElements.forEach(function(e) {
-            const eTop =  e.getBoundingClientRect().top;
-            const eBottom =  e.getBoundingClientRect().bottom;
-
-            //when < 60% of the viewport is above the top of a fade-in element, it will fade in
-            if (eTop < window.innerHeight*0.6 && !(eTop < window.innerHeight*0)) {
-                if(!e.classList.contains('visible')){ 
-                    e.classList.add('visible');
-                } 
-            } 
-        })
-
-        const zBox = document.querySelector('#zentella-card');
-        const zContent = document.querySelector('#zentella-content');
-        let indexMql = window.matchMedia('(max-width: 1050px)')
-        const clearance = indexMql.matches ? window.innerHeight * 0.7 : 10
-
-        const zTop =  zBox.getBoundingClientRect().top;
-        if (!zAnimated && zTop <= clearance) {
-            zAnimated = true
-            zContent.classList.add('z-box-bounce-up');
-            if (zContent.classList.contains('hidden')) {
-                zContent.classList.remove('hidden');
-                zContent.classList.add('visible');
+        //start intro animations
+        ; (async () => {
+            await timer(1500)
+            for (let i = 0; i < animSequence.length; i++) {
+                animSequence[i].animate(fadeSlideRight, { duration: 1500, fill: 'forwards', easing: 'ease-out' })
+                await timer(300);
             }
-        } 
 
-        const vBox = document.querySelector('#vegoons-card')
-        const caseStudiesSticky = document.querySelector('#sticky-header')
+            five.classList.add('fade-in');
+        })();
 
-        if (!vAnimated && vBox.getBoundingClientRect().top <= clearance) {
-            vBox.animate(
-                [{opacity: 1}],
-                {
-                    duration: 1000,
-                    fill: 'forwards',
-                    easing: 'ease-out'
+    const caseStudiesSticky = document.querySelector('#sticky-header')
+
+    const animateCaseStudies = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.animate([
+                    { transform: 'translateY(3em)' },
+                    { transform: 'translateY(0)' }
+                ], { duration: 250, fill: 'forwards', easing: 'ease-out' })
+                entry.target.animate(fadeIn, { duration: 250, fill: 'forwards', easing: 'ease-out' })
+                observer.disconnect()
+            }
+        })
+    }, { threshold: 0.4 })
+
+    animateCaseStudies.observe(caseStudiesSticky)
+
+}
+
+//lazy load videos on screens larger than phone width (otherwise leaves them as images)
+if (window.matchMedia('(min-width: 400px)').matches) {
+    document.addEventListener('DOMContentLoaded', () => {
+        const lazyVideos = Array.from(document.querySelectorAll('video.lazy'))
+
+        const lazyVideoObserver = new IntersectionObserver((entries, _observer) => {
+            entries.forEach(video => {
+                if (video.isIntersecting) {
+                    for (const source in video.target.children) {
+                        const videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            videoSource.src = videoSource.dataset.src;
+                        }
+                    }
+
+                    video.target.load();
+                    video.target.classList.remove("lazy");
+                    lazyVideoObserver.unobserve(video.target);
                 }
-            )
-            caseStudiesSticky.animate([
-                {transform: 'translateY(3em)'},
-                {transform: 'translateY(0)'}
-            ], {duration: 250, fill: 'forwards', easing: 'ease-out'})
-            caseStudiesSticky.animate(fadeIn, {duration: 250, fill: 'forwards', easing: 'ease-out'})
-            vAnimated = true
-        }
-    }
+            });
+        });
+
+        lazyVideos.forEach(lazyVideo => {
+            lazyVideoObserver.observe(lazyVideo);
+        });
+    })
 }
 
 //menu functions
@@ -99,17 +94,6 @@ navIcon.addEventListener('keydown', e => {
     if (e.keyCode === 13) openMenu()
 })
 let open = false
-
-//--animations
-
-const fadeIn = [
-    {opacity: 0},
-    {opacity: 1}
-]
-const slideDown = [
-    {transform: 'translateY(-3em)'},
-    {transform: 'translateY(0)'}
-]
 
 async function openMenu() {
     const navItem = document.querySelectorAll('nav ul li')
@@ -125,25 +109,25 @@ async function openMenu() {
             nav.style.backgroundColor = 'white'
         }
 
-        navUl.animate(fadeIn, {duration: 400})
-        nav.animate(fadeIn, {duration: 400})
+        navUl.animate(fadeIn, { duration: 400 })
+        nav.animate(fadeIn, { duration: 400 })
 
         for (let i = 0; i < navItem.length; i++) {
             const e = navItem[i]
 
-            e.animate(fadeIn, {duration: 300, easing: 'ease-out', fill: 'forwards'})
-            e.animate(slideDown, {duration: 300, easing: 'ease-out', fill: 'forwards'})
+            e.animate(fadeIn, { duration: 300, easing: 'ease-out', fill: 'forwards' })
+            e.animate(slideDown, { duration: 300, easing: 'ease-out', fill: 'forwards' })
             await timer(200)
         }
     } else {
         open = !open
-        navUl.animate(fadeIn, {direction: 'reverse', duration: navItem.length * 300})
-        nav.animate(fadeIn, {direction: 'reverse', duration: navItem.length * 300})
+        navUl.animate(fadeIn, { direction: 'reverse', duration: navItem.length * 300 })
+        nav.animate(fadeIn, { direction: 'reverse', duration: navItem.length * 300 })
         for (let i = 0; i < navItem.length; i++) {
             const e = navItem[i]
 
-            e.animate(fadeIn, {duration: 200, easing: 'ease-out', fill: 'forwards', direction: 'reverse'})
-            e.animate(slideDown, {duration: 200, easing: 'ease-out', fill: 'forwards', direction: 'reverse'})
+            e.animate(fadeIn, { duration: 200, easing: 'ease-out', fill: 'forwards', direction: 'reverse' })
+            e.animate(slideDown, { duration: 200, easing: 'ease-out', fill: 'forwards', direction: 'reverse' })
             await timer(200)
 
             if (i === navItem.length - 1) navUl.style.display = 'none'

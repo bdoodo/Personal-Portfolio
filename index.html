@@ -1,153 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property='og:image' content='/Assets/images/fb-avatar2.png'>
-    <meta name="Description" content="Front-end developer focused on meaningful designs. SoCal-based.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="/Assets/images/fb-avatar2.png" />
+    <meta
+      name="Description"
+      content="Developer focused on meaningful designs. SoCal-based."
+    />
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YCPVF0Y761"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YCPVF0Y761"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-YCPVF0Y761');
+      gtag("config", "G-YCPVF0Y761");
     </script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script defer src="/src/index.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="/src/styles.css" />
     <title>Brian H Do</title>
-    <link rel="shortcut icon" href="/Assets/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/Assets/favicon.png" type="image/x-icon" />
     <!--Zentella font-->
     <script>
-        (function(d) {
-          var config = {
-            kitId: 'gvs5qfq',
+      (function (d) {
+        var config = {
+            kitId: "gvs5qfq",
             scriptTimeout: 3000,
-            async: true
+            async: true,
           },
-          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <img id="nav-icon" src="/Assets/menu.svg" tabindex=0 aria-label="navigation menu">
-        <ul>
-            <li class="nav-item closed"><a href="/#"><p>Home</p></a></li>
-            <li class="nav-item closed"><a href="/#case-studies"><p>Case Studies</p></a></li>
-            <li class="nav-item closed"><a href="/#misc-projects"><p>Misc. Projects</p></a></li>
-        </ul>
+      <img
+        id="nav-icon"
+        src="/Assets/menu.svg"
+        tabindex="0"
+        aria-label="navigation menu"
+      />
+      <ul>
+        <li class="nav-item closed">
+          <a href="/#"><p>Home</p></a>
+        </li>
+        <li class="nav-item closed">
+          <a href="/#featured-projects"><p>Featured projects</p></a>
+        </li>
+        <li class="nav-item closed">
+          <a href="/#misc-projects"><p>Misc. Projects</p></a>
+        </li>
+      </ul>
     </nav>
     <main id="index">
-        <section id="section-1">
-            <header>
-                <h1 id="anim-1">BRIAN H DO</h1>
-                <hr noshade id="anim-3">
-                <h2 id="anim-2"><span style='letter-spacing: 2px;'>U</span><span class='small-caps' style='letter-spacing: 1px;'>x</span>-Focused Front-End Engineer</h2>
-            </header>
-            <div id="content-1">
-                <div class="space-around">
-                    <div id="b-sig">
-                        <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_jzwie0at.json" background="transparent" speed="1" style="width:300px;height:300px;" autoplay/>
-                    </div>
-                    <div class="single-column" id="anim-4">
-                        <p>
-                            Designing and building meaningful web apps. 
-                            I'm passionate about front-end development and 
-                            intelligent <span class='small-caps'>ux</span>. 
-                            Currently seeking a full-time role.
-                        </p>
-                        <a href='https://github.com/bdoodo'><img class='icon' src='/Assets/icons/github.svg'/></a>
-                        <a href='https://www.linkedin.com/in/brianhhdo/'><img class='icon' src='/Assets/icons/linkedIn.svg' style='margin-left: 2em'/></a>
-                    </div>
-                </div>
+      <section id="section-1">
+        <header>
+          <h1 id="anim-1">BRIAN H DO</h1>
+          <hr noshade id="anim-3" />
+          <h2 id="anim-2">
+            <span style="letter-spacing: 2px">U</span
+            ><span class="small-caps" style="letter-spacing: 1px">x</span
+            >-Focused Software Engineer
+          </h2>
+        </header>
+        <div id="content-1">
+          <div class="space-around">
+            <div id="b-sig">
+              <lottie-player
+                src="https://assets9.lottiefiles.com/private_files/lf30_jzwie0at.json"
+                background="transparent"
+                speed="1"
+                style="width: 300px; height: 300px"
+                autoplay
+              />
             </div>
-        </section>
-        <section id="section-2">
-            <h2 id="anim-5">Philosophy.</h2>
-            <div id='content-2' class='double-column hidden'>
-                <p>
-                    Designs influence cultures, including the way we live with and talk to one 
-                    another. That's powerful, and to command this, good design 
-                    should be purposeful: Strong when needed, hidden when not, yet 
-                    always backed with intention. 
-                </p>
-                <p>
-                    As something functional, I see <span class='small-caps'>ux</span> 
-                    design as intertwined with development, in the way that architecture 
-                    is intertwined with the engineering and construction that follows. 
-                    This was my own entry into web development: To see it as a tool of 
-                    digital design, necessary yet not less interesting.
-                </p>
-                <p>
-                    Mainly, I'm passionate about the future of the web, especially as 
-                    it'll evolve on the Jamstack.
-                </p>
+            <div class="single-column" id="anim-4">
+              <p>
+                Designing and building meaningful web apps. I'm interested in
+                developing with new technologies and intelligent
+                <span class="small-caps">ux</span>. Currently seeking a
+                full-time role.
+              </p>
+              <a href="https://github.com/bdoodo"
+                ><img class="icon" src="/Assets/icons/github.svg"
+              /></a>
+              <a href="https://www.linkedin.com/in/brianhhdo/"
+                ><img
+                  class="icon"
+                  src="/Assets/icons/linkedIn.svg"
+                  style="margin-left: 2em"
+              /></a>
             </div>
-            <div id="letters">
-                <p class="floating bold blur" id="l1">b</p>
-                <p class="floating bold blur" id="l2">o</p>
-                <p class="floating bold blur" id="l3">g</p>
-                <p class="floating bold blur" id="l4">d</p>
-                <p class="floating bold blur" id="l5">h</p>
+          </div>
+        </div>
+      </section>
+      <section id="section-2">
+        <h2 id="anim-5">Philosophy.</h2>
+        <div id="content-2" class="double-column">
+          <p>
+            I started developing with an interest in design: To work with
+            creative concepts in fun ways. Since then, I've explored other
+            aspects of development: the ones that make an app performant,
+            maintainable, accessible and above all, usable—something users would
+            want to play with not as a 'website,' but just as an app.
+          </p>
+          <p>
+            I'm most excited for the evolution of the web in this way, and my
+            featured projects reflect that. Making use of design systems, they
+            resemble native apps; my most recent project, Reverie, is an
+            installable <span class="small-caps">pwa</span> with a simple cache
+            worker to resemble native app loading times.
+          </p>
+          <p>
+            While now very different in some ways, my interests are the same in
+            spirit as when I started: I'm still most excited about the areas
+            of development that provide the most <i>impact</i>, in terms of
+            mission and a meaningful user experience. It just turns out those
+            areas can vary, from front-end to back-end to cutting-edge web
+            standards, frameworks, and libraries. All worth pursuing.
+          </p>
+        </div>
+        <div id="letters">
+          <p class="floating bold blur" id="l1">b</p>
+          <p class="floating bold blur" id="l2">o</p>
+          <p class="floating bold blur" id="l3">g</p>
+          <p class="floating bold blur" id="l4">d</p>
+          <p class="floating bold blur" id="l5">h</p>
+        </div>
+      </section>
+      <section id="featured-projects">
+        <div id="sticky-header">
+          <h2>Featured projects.</h2>
+        </div>
+        <div id="reverie-card" class="featured-card">
+          <div class="flex-wrap card-content">
+            <div class="card-text">
+              <h3 class="header">Reverie</h3>
+              <p>Responsive PWA using machine vision to help brainstorm.</p>
+              <div class="reverie__links-1">
+                <a
+                  href="https://medium.com/@briando_64789/creating-reverie-a-brainstorming-app-using-machine-vision-4bcc5e15532"
+                >
+                  <img class="icon" src="Assets/icons/medium.svg" />
+                </a>
+                <a
+                  href="https://github.com/bdoodo/Personal-Projects/tree/main/reverie"
+                >
+                  <img class="icon" src="Assets/icons/github.svg" />
+                </a>
+              </div>
+              <a
+                class="reverie__links-2"
+                href="https://main.df00t7gmzadln.amplifyapp.com/"
+                ><p>Live Link</p></a
+              >
             </div>
-        </section>
-        <section id='case-studies'>
-            <div id='sticky-header'>
-                <h2>Case Studies.</h2>
+            <div id="reverie-images">
+              <video
+                autoplay
+                loop
+                playsinline
+                muted
+                height="225"
+                poster="Assets/reverie/Reverie Desktop.png"
+                class="lazy"
+              >
+                <source
+                  data-src="Assets/reverie/Reverie Desktop Loop.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <img src="Assets/reverie/Reverie Mobile.png" />
             </div>
-            <div id="vegoons-card">
-                <div id="vegoons-content" class='flex-wrap' style='justify-content: center; align-items: center;'>
-                    <div>
-                        <h3 style='font-family: Sutro; font-size: 34px'>Vegoons</h3>
-                        <p id='subtitle' style='font-family: Karmina; max-width: 11em;'>Streamlined mobile web app for hungry vegans.</p>
-                        <a href="/src/vegoons.html" id='vegoons-card__link'><p style="font-family: Sutro; position: relative; top: 1em; left: 3em">Read more.</p></a>
-                    </div>
-                    <img id='vegoons-iphone' src='/Assets/Vegoons/Vegoons-iphone.png' alt='Vegoons iPhone prototype'/>
-                </div>
-            </div> 
-            <div id="zentella-card">
-                <div id="zentella-content" class="hidden">
-                    <h3 id="zentella-header" class="ten-mincho">Zentella</h3>
-                    <img id="" src="/Assets/Zentella/SVG/pig-colored.svg">
-                    <img src="/Assets/Zentella/SVG/centella-colored.svg">
-                    <p class="chaparral">Organic, playful concept <br>
-                        for a beauty brand.</p>
-                    <a href="/src/Zentella.html"><p class="chaparral">Read more.</p></a>
-                </div>
-            </div> 
-        </section>
-        <section id='misc-projects'>
-            <h2>Misc. Projects.</h2>
+          </div>
+        </div>
+        <div id="vegoons-card" class="featured-card">
+          <div id="vegoons-content" class="flex-wrap card-content">
             <div>
-                <div class='box box--disabled'></div>
-                <div class='box'>
-                    <img src='Assets/images/Polygons.svg' style='height: 200px'/>
-                    <img src='Assets/images/polygon-logo.svg' style='height: 30px'/>
-                    <div class='box__icons'>
-                        <img class='icon' src='Assets/icons/vue.svg'/>
-                        <img class='icon' src='Assets/icons/material.svg'/>
-                    </div>
-                    <div class='box__summary' tabindex='0'>
-                        <p>Clean, modular code for an <i>accessible</i>, <i>responsive</i>, and <i>performant</i> landing page.</p>
-                        <p>Made with Vue and Material <span class='small-caps'>ui</span> as a mash-up between DuckDuckGo and Polygon.</p>
-                        <div class='box__icons'>
-                            <a href='https://github.com/bdoodo/Personal-Projects/tree/main/polygon-redesign' target='blank'>
-                                <img class='icon' src='Assets/icons/github.svg'>
-                            </a>
-                            <a href='https://polyduck.netlify.app' target='blank'><p>Link</p></a>
-                        </div>
-                    </div>
-                </div>
-                <div class='box box--disabled'></div>
+              <h3 style="font-family: Sutro; font-size: 34px">Vegoons</h3>
+              <p class="subtitle" style="font-family: Karmina; max-width: 11em">
+                Streamlined mobile web app for hungry vegans.
+              </p>
+              <a href="/src/vegoons.html" id="vegoons-card__link"
+                ><p
+                  style="
+                    font-family: Sutro;
+                    position: relative;
+                    top: 1em;
+                    left: 3em;
+                  "
+                >
+                  Read more.
+                </p></a
+              >
             </div>
-        </section>
-        <section id="contact-footer">
-            <img src='Assets/images/fb-avatar.png'/>
-            <p class="cap">Chat with me:  <span id="v-inline">|</span>  <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a></p>
-        </section>
+            <img
+              id="vegoons-iphone"
+              src="/Assets/Vegoons/Vegoons-iphone.png"
+              alt="Vegoons iPhone prototype"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="misc-projects">
+        <h2>Misc. Projects.</h2>
+        <div>
+          <div class="box">
+            <img src="Assets/images/Polygons.svg" style="height: 200px" />
+            <img src="Assets/images/polygon-logo.svg" style="height: 30px" />
+            <div class="box__icons">
+              <img class="icon" src="Assets/icons/vue.svg" />
+              <img class="icon" src="Assets/icons/material.svg" />
+            </div>
+            <div class="box__summary" tabindex="0">
+              <p>
+                Clean, modular code for an <i>accessible</i>, <i>responsive</i>,
+                and <i>performant</i> landing page.
+              </p>
+              <p>
+                Made with Vue and Material <span class="small-caps">ui</span> as
+                a mash-up between DuckDuckGo and Polygon.
+              </p>
+              <div class="box__icons">
+                <a
+                  href="https://github.com/bdoodo/Personal-Projects/tree/main/polygon-redesign"
+                  target="blank"
+                >
+                  <img class="icon" src="Assets/icons/github.svg" />
+                </a>
+                <a href="https://polyduck.netlify.app" target="blank"
+                  ><p>Link</p></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="box" id="zentella-box">
+            <img id="pig" src="Assets/Zentella/SVG/pig-colored.svg" />
+            <img
+              id="flower-garden"
+              src="Assets/Zentella/SVG/flower-garden.svg"
+            />
+            <img id="centella" src="Assets/Zentella/SVG/centella-colored.svg" />
+            <h3 class="ten-mincho box__title">Zentella</h3>
+            <div class="box__icons">
+              <img class="icon" src="Assets/icons/shopify.svg" />
+            </div>
+            <div class="box__summary" tabindex="0">
+              <p>Organic, playful concept for a beauty brand.</p>
+              <p>Created as original concept art and prototyped on Shopify.</p>
+              <div class="box__icons">
+                <a href="/src/Zentella.html"><p>Read more.</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact-footer">
+        <img src="Assets/images/fb-avatar.png" />
+        <p class="cap">
+          Chat with me: <span id="v-inline">|</span>
+          <a href="mailto:hello@brianhdo.com">hello@brianhdo.com</a>
+        </p>
+      </section>
     </main>
-</body>
+  </body>
 </html>
