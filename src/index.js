@@ -12,7 +12,7 @@ const slideDown = [
 ]
 
 //home only
-if (window.location.pathname == '/' || window.location.pathname == '/index.html') {
+if (window.location.pathname == '/' || window.location.pathname == '/index.html' || window.location.pathname == '/src/index.html') {
 
     const one = document.querySelector('#anim-1');
     const two = document.querySelector('#anim-2');
