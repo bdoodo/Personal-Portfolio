@@ -62,21 +62,21 @@ if (window.matchMedia('(min-width: 400px)').matches) {
     document.addEventListener('DOMContentLoaded', () => {
         const lazyVideos = Array.from(document.querySelectorAll('video.lazy'))
 
-        const lazyVideoObserver = new IntersectionObserver((entries, _observer) => {
-            entries.forEach(async video => {
+        const lazyVideoObserver = new IntersectionObserver(entries => {
+            for (const video of entries) {
                 if (video.isIntersecting) {
                     for (const source in video.target.children) {
                         const videoSource = video.target.children[source];
-                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                        if (videoSource?.tagName === "SOURCE") {
                             videoSource.src = 'https://brianhdo-assets.s3.us-west-2.amazonaws.com/' + videoSource.dataset.src;
                         }
                     }
 
-                    video.target.load();
+                    video.target.load()
                     video.target.classList.remove("lazy");
                     lazyVideoObserver.unobserve(video.target);
                 }
-            });
+            };
         });
 
         lazyVideos.forEach(lazyVideo => {
