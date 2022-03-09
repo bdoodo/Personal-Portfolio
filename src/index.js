@@ -72,12 +72,6 @@ if (window.matchMedia('(min-width: 400px)').matches) {
                         }
                     }
 
-                    video.target.removeAttribute('autoplay')
-                    video.target.addEventListener('loadeddata', () => {
-                        if (video.target.readyState === 4) {
-                            video.target.play()
-                        }
-                    })
                     video.target.load()
                     video.target.classList.remove("lazy");
                     lazyVideoObserver.unobserve(video.target);
